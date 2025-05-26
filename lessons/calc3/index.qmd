@@ -1,0 +1,4 @@
+# Redirecting you to /lessons/calc3/intro
+<script>
+    window.location.href = "/lessons/calc3/intro"
+</script>
