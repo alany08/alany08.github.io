@@ -1,4 +1,6 @@
-# Redirecting you to /lessons/calc3/intro
-<script>
-    window.location.href = "/lessons/calc3/intro"
-</script>
+Calculus III
+---
+
+*Last updated 2025-05-26* \
+
+⚠️ This page is under construction⚠️

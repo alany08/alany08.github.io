@@ -11,7 +11,10 @@ format:
 website:
   page-navigation: true
   title: "616c616e"
-  navbar: true
+  navbar:
+    left:
+      - text: Lessons
+        href: lessons/index.qmd
 
 project:
   type: website
