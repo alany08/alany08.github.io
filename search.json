@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "lessons/calc3/intro.html",
+    "href": "lessons/calc3/intro.html",
+    "title": "616c616e",
+    "section": "",
+    "text": "Last edited 2025-05-26 ⚠️ This page is under construction⚠️"
+  },
+  {
+    "objectID": "lessons/calc3/intro.html#calculus-iiimultivariable-calculus",
+    "href": "lessons/calc3/intro.html#calculus-iiimultivariable-calculus",
+    "title": "616c616e",
+    "section": "",
+    "text": "Last edited 2025-05-26 ⚠️ This page is under construction⚠️"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "616c616e",
@@ -12,5 +26,12 @@
     "title": "616c616e",
     "section": "",
     "text": "Last edited 2025-05-25\nHello there! Welcome to my personal blog, where I (will) post cool stuff I find, my opinions and thoughts, and some stuff that interests me. I’ll also try to create interactive lessons from an intuitive standpoint for mathematics and physics. With my belief in free and open-source, all of the contents on this website are licensed under the MIT license.\nThere’s currently not a lot on here, as I’ve recently started building this page."
+  },
+  {
+    "objectID": "lessons/calc3/index.html",
+    "href": "lessons/calc3/index.html",
+    "title": "Redirecting you to /lessons/calc3/intro",
+    "section": "",
+    "text": "Redirecting you to /lessons/calc3/intro"
   }
 ]
