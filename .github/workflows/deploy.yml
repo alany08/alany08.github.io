@@ -16,6 +16,12 @@ jobs:
       - name: Render Quarto Project
         run: quarto render
 
+      - name: Copy .well-known to public
+        run: cp -r .well-known public/
+
+      - name: Copy _config.yml to public
+        run cp _config.yml public/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
