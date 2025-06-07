@@ -1,7 +1,9 @@
-Home - 616c616e
 ---
-
-*Last updated 2025-06-02*
+title: Home - 616c616e
+date: 2025-05-28
+date-modified: 2025-06-07
+description: "My personal website"
+---
 
 Hello there! Welcome to my personal blog, where I (will) post cool stuff I find, my
 opinions and thoughts, and some stuff that interests me. I'll also try to create
