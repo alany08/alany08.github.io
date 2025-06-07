@@ -4,41 +4,55 @@
     "href": "lessons/index.html",
     "title": "616c616e",
     "section": "",
-    "text": "Last updated 2025-05-26\nIt would probably be better to have a legit indexing system, but for now I’ll just have this be the index for the lessons I have.\n\nCalculus III"
+    "text": "THIS IS A DEAD PAGE, NO INBOUND LINKS\nLast updated 2025-06-07\nIt would probably be better to have a legit indexing system, but for now I’ll just have this be the index for the lessons I have.\n\nCalculus III"
   },
   {
     "objectID": "lessons/index.html#lessons",
     "href": "lessons/index.html#lessons",
     "title": "616c616e",
     "section": "",
-    "text": "Last updated 2025-05-26\nIt would probably be better to have a legit indexing system, but for now I’ll just have this be the index for the lessons I have.\n\nCalculus III"
+    "text": "THIS IS A DEAD PAGE, NO INBOUND LINKS\nLast updated 2025-06-07\nIt would probably be better to have a legit indexing system, but for now I’ll just have this be the index for the lessons I have.\n\nCalculus III"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "616c616e",
+    "title": "Home - 616c616e",
     "section": "",
-    "text": "Last updated 2025-06-02\nHello there! Welcome to my personal blog, where I (will) post cool stuff I find, my opinions and thoughts, and some stuff that interests me. I’ll also try to create interactive lessons from an intuitive standpoint for mathematics and physics. With my belief in free and open-source, all of the contents on this website are licensed under the MIT license unless otherwise stated.\nThere’s currently not a lot on here, as I’ve recently started building this page.\nSomeone help me commit to doing these\n\nA game in which your mind is your own enemy\nA new ZKP authentication algorithm that is proof of work\nThis blog!\nEdit wikipedia pages\nRead research papers\nNasa’s Exoplanet Watch Program"
-  },
-  {
-    "objectID": "index.html#home---616c616e",
-    "href": "index.html#home---616c616e",
-    "title": "616c616e",
-    "section": "",
-    "text": "Last updated 2025-06-02\nHello there! Welcome to my personal blog, where I (will) post cool stuff I find, my opinions and thoughts, and some stuff that interests me. I’ll also try to create interactive lessons from an intuitive standpoint for mathematics and physics. With my belief in free and open-source, all of the contents on this website are licensed under the MIT license unless otherwise stated.\nThere’s currently not a lot on here, as I’ve recently started building this page.\nSomeone help me commit to doing these\n\nA game in which your mind is your own enemy\nA new ZKP authentication algorithm that is proof of work\nThis blog!\nEdit wikipedia pages\nRead research papers\nNasa’s Exoplanet Watch Program"
+    "text": "Hello there! Welcome to my personal blog, where I (will) post cool stuff I find, my opinions and thoughts, and some stuff that interests me. I’ll also try to create interactive lessons from an intuitive standpoint for mathematics and physics. With my belief in free and open-source, all of the contents on this website are licensed under the MIT license unless otherwise stated.\nThere’s currently not a lot on here, as I’ve recently started building this page.\nSomeone help me commit to doing these\n\nA game in which your mind is your own enemy\nA new ZKP authentication algorithm that is proof of work\nThis blog!\nEdit wikipedia pages\nRead research papers\nNasa’s Exoplanet Watch Program"
   },
   {
     "objectID": "lessons/calc3/index.html",
     "href": "lessons/calc3/index.html",
-    "title": "616c616e",
+    "title": "Intro to Calc III",
     "section": "",
-    "text": "Last updated 2025-05-26\n\n⚠️ This page is under construction⚠️"
+    "text": "Vectors and 3d Space\n1.1 Vectors and Vector Fields\n1.2 Lines and Planes\n1.3 Parametric Functions and Curves\n1.4 Surfaces\n1.5 Coordinate Systems\n\nDifferentiation\n2.1 Partial Derivatives\n2.2 Chain Rule\n2.3 Gradient and Directional Derivatives\n2.4 Curl and Divergence\n2.5 Optimization\n\nIntegration\n3.1 Multiple Integrals\n3.2 Jacobian\n3.3 Line Integrals\n3.4 Surface and Flux Integrals\n3.5 Stoke’s and Divergence Theorem\n3.6 Green’s Theorem\n\nMaybe just a short intro that isn’t topic specific, or maybe intro that is split between the three general points"
   },
   {
-    "objectID": "lessons/calc3/index.html#calculus-iii",
-    "href": "lessons/calc3/index.html#calculus-iii",
-    "title": "616c616e",
+    "objectID": "lessons/calc3/index.html#overview-of-contents",
+    "href": "lessons/calc3/index.html#overview-of-contents",
+    "title": "Intro to Calc III",
     "section": "",
-    "text": "Last updated 2025-05-26\n\n⚠️ This page is under construction⚠️"
+    "text": "Vectors and 3d Space\n1.1 Vectors and Vector Fields\n1.2 Lines and Planes\n1.3 Parametric Functions and Curves\n1.4 Surfaces\n1.5 Coordinate Systems\n\nDifferentiation\n2.1 Partial Derivatives\n2.2 Chain Rule\n2.3 Gradient and Directional Derivatives\n2.4 Curl and Divergence\n2.5 Optimization\n\nIntegration\n3.1 Multiple Integrals\n3.2 Jacobian\n3.3 Line Integrals\n3.4 Surface and Flux Integrals\n3.5 Stoke’s and Divergence Theorem\n3.6 Green’s Theorem\n\nMaybe just a short intro that isn’t topic specific, or maybe intro that is split between the three general points"
+  },
+  {
+    "objectID": "lessons/calc3/index.html#vectors-and-3d-space",
+    "href": "lessons/calc3/index.html#vectors-and-3d-space",
+    "title": "Intro to Calc III",
+    "section": "Vectors and 3d Space",
+    "text": "Vectors and 3d Space\nBlah Blah Blah"
+  },
+  {
+    "objectID": "lessons/calc3/index.html#differentiation",
+    "href": "lessons/calc3/index.html#differentiation",
+    "title": "Intro to Calc III",
+    "section": "Differentiation",
+    "text": "Differentiation\nEEEEEE EEEE"
+  },
+  {
+    "objectID": "lessons/calc3/index.html#integration",
+    "href": "lessons/calc3/index.html#integration",
+    "title": "Intro to Calc III",
+    "section": "Integration",
+    "text": "Integration\nEEEEEEEEEEEfsd"
   }
 ]
