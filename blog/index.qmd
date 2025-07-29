@@ -1,0 +1,18 @@
+---
+title: "Blogs"
+listing:
+  contents: blog/**/*.qmd
+  type: grid
+  grid-columns: 3
+  sort: "title desc"       # Sort by title, which includes date prefix
+  fields: [image, date, title, description, categories]
+  date-format: short
+  image-height: 200px
+  image-placeholder: "/images/placeholder.png"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+page-layout: full
+title-block-banner: false
+---
+## Latest Posts

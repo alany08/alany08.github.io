@@ -1,7 +1,9 @@
 Lessons
 ---
 
-*Last updated 2025-05-26*
+THIS IS A DEAD PAGE, NO INBOUND LINKS
+
+*Last updated 2025-06-07*
 
 It would probably be better to have a legit indexing system,
 but for now I'll just have this be the index for the lessons

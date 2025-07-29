@@ -15,7 +15,12 @@ website:
   navbar:
     left:
       - text: Lessons
-        href: lessons/index.qmd
+        # href: lessons/index.qmd
+        menu:
+          - text: "Calc III"
+            href: lessons/calc3/index.qmd
+      - text: Blog
+        href: blog/index.qmd
 
 project:
   type: website
