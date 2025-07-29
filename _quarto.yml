@@ -7,7 +7,6 @@ format:
     page-layout: full
     # Enable clean URLs
     anchor-sections: true
-    include-in-header: ga.html
 
 website:
   page-navigation: true
