@@ -1,0 +1,5 @@
+#title-block-header {
+  border-bottom: 2px solid var(--quarto-border-color); /* horizontal bar */
+  padding-bottom: 0.5em; /* space above the bar */
+  margin-bottom: 1em; /* space below the bar */
+}

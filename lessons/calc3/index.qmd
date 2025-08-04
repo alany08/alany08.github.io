@@ -2,7 +2,6 @@
 title: "Intro to Calc III"
 date: 2025-06-02
 date-modified: 2025-06-07
-categories: [lesson]
 ---
 
 ## Overview of Contents

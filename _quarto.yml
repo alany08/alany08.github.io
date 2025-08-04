@@ -7,6 +7,7 @@ format:
     page-layout: full
     # Enable clean URLs
     anchor-sections: true
+    css: assets/css/styles.css
 
 website:
   page-navigation: true
@@ -26,7 +27,11 @@ project:
   output-dir: public
   render:
     - "**/*.qmd"
+    - "**/*.png"
     - "!public/"
+  resources:
+    - "*.png"
+    - "*.css"
 
 output:
   html:
