@@ -4066,7 +4066,7 @@ vertical-align: -.125em;
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -4224,6 +4224,11 @@ window.Quarto = {
 };
 </script>
 
+<style type="text/css">#title-block-header {
+border-bottom: 2px solid var(--quarto-border-color); 
+padding-bottom: 0.5em; 
+margin-bottom: 1em; 
+}</style>
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -4270,14 +4275,8 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#latest-posts" id="toc-latest-posts" class="nav-link active" data-scroll-target="#latest-posts">Latest Posts</a></li>
-  </ul>
-</nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category>All <span class="quarto-category-count">(0)</span></div></div></div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category>All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGVjaA==">Tech <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -4300,12 +4299,9 @@ window.Quarto = {
 </header>
 
 
-<section id="latest-posts" class="level2">
-<h2 class="anchored" data-anchor-id="latest-posts">Latest Posts</h2>
 
 
 
-</section>
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
@@ -4331,7 +4327,30 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="VGVjaA==" data-listing-date-sort="1754265600000" data-listing-file-modified-sort="1754342968344" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
+<a href="../blog/posts/detecting_ai_generated_images/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="/assets/images/blog_placeholder.png" style="height: 200px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Detecting AI Generated Images
+</h5>
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory(&#39;VGVjaA==&#39;); return false;">Tech</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>[WIP] What fingerprints AI image generation leaves on the image, and how to use them to identify truth and return integrity to information on the internet.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+8/4/25
+</div>
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
