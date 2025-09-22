@@ -3,19 +3,26 @@ title: Detecting AI Generated Images
 date: 2025-08-04
 description: "[WIP] What fingerprints AI image generation leaves on the image, and how to use them to identify truth and return integrity to information on the internet."
 categories: [Tech]
+draft: true
 ---
 
 # Heads up! This page is under construction and may be modified or removed at any time!
 
 ## Introduction
-- Why care?
-- Why does it matter?
-- What's been happening?
+As new technology develops and becomes available to the general public,
+we must take responsibility for their unintended effects. For example, 
+the development of the internet came cybersecurity while with e-commerce
+came legislative reforms and amendments to copyright and ownership.
+
 
 ## How images are generated
 - Standard diffusion models
 - Tie into specifically the math behind htem
 - Add diagrams
+
+## Images as signal processing
+- Introduce FFT
+- How to extract meaningful information from them
 
 ## What characteristics generated images have
 - What's the difference between an authentic picture and a generated one?
@@ -25,3 +32,6 @@ categories: [Tech]
 - Talk about taking FFT of the images
 - Using noise residues
 - How this exploits the uniqueness of AI images
+
+## Sources
+- https://arxiv.org/html/2409.07913v1

@@ -14,13 +14,17 @@ website:
   title: "616c616e"
   navbar:
     left:
+      - text: Blog
+        href: blog/index.qmd
+      - text: Cool Stuff
+        menu:
+          - text: "Sunsets"
+            href: stuffs/sunsets/index.qmd
       - text: Lessons
         # href: lessons/index.qmd
         menu:
           - text: "Calc III"
             href: lessons/calc3/index.qmd
-      - text: Blog
-        href: blog/index.qmd
 
 project:
   type: website
@@ -28,9 +32,11 @@ project:
   render:
     - "**/*.qmd"
     - "**/*.png"
+    - "**/*.jpg"
     - "!public/"
   resources:
     - "*.png"
+    - "*.jpg"
     - "*.css"
 
 output:
