@@ -1,7 +1,7 @@
 ---
 title: Home
 date: 2025-05-28
-date-modified: 2025-08-06
+date-modified: 2025-09-21
 description: "616c616e"
 listing:
   contents: blog/posts
