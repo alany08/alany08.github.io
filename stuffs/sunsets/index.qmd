@@ -2,7 +2,9 @@
 title: Sunsets
 date: 2025-09-21
 date-modified: 2025-09-21
-format: html
+format: 
+  html:
+    self-contained: false
 resources:
   - assets/*.jpg
 ---
