@@ -2,7 +2,7 @@
 title: First Post!
 date: 2025-10-26
 description: "My first non-draft post! How I want to further develop this blog, and things that I want to do (but may or may not be abandoned as life changes)"
-categories: [misc]
+categories: [Misc]
 ---
 
 ![Cool sunset beacuse why not! This was taken by my drone on Oct 14th.](cool_sunset.jpg){.lightbox}

@@ -1,0 +1,63 @@
+---
+title: Digital Privacy & Rights, My take
+date: 2025-10-26
+description: "Wow companies are gathering a lot of data I don't want. Here's my experince trying to exercise my CPRA Rights"
+categories: [misc]
+draft: true
+---
+
+## Companies I will request to...
+**delete all my data, and completely disaffirm ToS (I'm still a minor!!)**
+
+ - Airbuds
+ - Anime Expo
+ - Riot Games
+ - Manus
+ - Roblox
+ - OpenAI
+ - X/Twitter
+ - Grok
+ - Anthropic
+ - Reddit
+ - Tiktok
+ - Microsoft (excl. Github)
+ - McDonalds
+ - Temu
+ - Pinterest
+ - Perplexity
+ - Eventbrite
+ - Samsung
+ - Supercell
+ - Freecash
+ - Survey Junkie
+ - Call of Duty
+ - Mint Mobile
+ - Redpocket
+ - Comcast
+ - Xfinity
+
+**opt out of everything I legally can**
+
+ - Recroom
+ - Toggl Track
+ - Steam
+ - Hoyoverse
+ - Kuro Games
+ - Mozilla
+ - Bungee
+ - Instagram
+ - Discord
+ - Apple
+ - Beeper/Automattic
+ - Google
+ - Collegeboard
+ - Spotify
+ - Duolingo
+ - Snapchat
+ - US Mobile
+ - Meetup
+ - Notability
+ - Amazon
+ - Ticktick
+ - Epic Games
+ - Linkedin

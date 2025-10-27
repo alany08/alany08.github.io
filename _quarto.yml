@@ -1,6 +1,6 @@
 format:
   html:
-    self-contained: true
+    self-contained: false
     toc: true
     # Clean URLs enabled
     html-math-method: mathjax
