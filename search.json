@@ -4,7 +4,70 @@
     "href": "stuffs/sunsets/index.html",
     "title": "Sunsets",
     "section": "",
-    "text": "I like sunsets. I like clouds. I like sunsets with pretty clouds. These were all taken by me, with my limited photography equipment and skills (iPhone and a DJI drone)."
+    "text": "I like sunsets. I like clouds. I like sunsets with pretty clouds. These were all taken by me, with my casual photography equipment and skills (iPhone and a DJI drone)."
+  },
+  {
+    "objectID": "notes/calc3/index.html",
+    "href": "notes/calc3/index.html",
+    "title": "Intro to Calc III",
+    "section": "",
+    "text": "Once I find time, I’ll simply upload the notes I took for my Calc III class, and refine them to be more readable for the public"
+  },
+  {
+    "objectID": "notes/calc3/index.html#overview-of-contents",
+    "href": "notes/calc3/index.html#overview-of-contents",
+    "title": "Intro to Calc III",
+    "section": "Overview of Contents",
+    "text": "Overview of Contents\n\nVectors and 3d Space\n1.1 Vectors and Vector Fields\n1.2 Lines and Planes\n1.3 Parametric Functions and Curves\n1.4 Surfaces\n1.5 Coordinate Systems\n\nDifferentiation\n2.1 Partial Derivatives\n2.2 Chain Rule\n2.3 Gradient and Directional Derivatives\n2.4 Curl and Divergence\n2.5 Optimization\n\nIntegration\n3.1 Multiple Integrals\n3.2 Jacobian\n3.3 Line Integrals\n3.4 Surface and Flux Integrals\n3.5 Stoke’s and Divergence Theorem\n3.6 Green’s Theorem\n\nMaybe just a short intro that isn’t topic specific, or maybe intro that is split between the three general points"
+  },
+  {
+    "objectID": "notes/calc3/index.html#vectors-and-3d-space",
+    "href": "notes/calc3/index.html#vectors-and-3d-space",
+    "title": "Intro to Calc III",
+    "section": "Vectors and 3d Space",
+    "text": "Vectors and 3d Space\nBlah Blah Blah"
+  },
+  {
+    "objectID": "notes/calc3/index.html#differentiation",
+    "href": "notes/calc3/index.html#differentiation",
+    "title": "Intro to Calc III",
+    "section": "Differentiation",
+    "text": "Differentiation\nEEEEEE EEEE"
+  },
+  {
+    "objectID": "notes/calc3/index.html#integration",
+    "href": "notes/calc3/index.html#integration",
+    "title": "Intro to Calc III",
+    "section": "Integration",
+    "text": "Integration\nEEEEEEEEEEEfsd"
+  },
+  {
+    "objectID": "blog/posts/first_post/index.html",
+    "href": "blog/posts/first_post/index.html",
+    "title": "First Post!",
+    "section": "",
+    "text": "Cool sunset beacuse why not! This was taken by my drone on Oct 14th."
+  },
+  {
+    "objectID": "blog/posts/first_post/index.html#welcome",
+    "href": "blog/posts/first_post/index.html#welcome",
+    "title": "First Post!",
+    "section": "Welcome!",
+    "text": "Welcome!\nI’ve created this blog quite a few months ago, and I’ve always wanted to use it to share my life and passion with others! However I’ve always put off making this blog, and putting real solid content into this blog, but I hope to change that starting now. Other than sharing my passion with this blog, I’d like this to be a space where I can share my knowledge, like my class notes and the tinkering I’ve done as I’ve tried to grasp concepts."
+  },
+  {
+    "objectID": "blog/posts/first_post/index.html#so..-what-now",
+    "href": "blog/posts/first_post/index.html#so..-what-now",
+    "title": "First Post!",
+    "section": "So.. What now…?",
+    "text": "So.. What now…?\nI’ve recently gotten a few ideas that I might add to this blog site, and we’ll see as we go. I don’t know if I’ll muster up enough motivation to add them, but they might work!\n\nUpload my Calc III notes to the existing one\nDocument my science olympiad progress!\nRegularly post how the plants in my garden are doing\nAdd small interactive experiences that revolve around one concept (maybe in the notes section?)\nSummarize what’s happened in my life on a weekly basis\nRegurgitate the stuff I learn in here (they say, trying to teach something is the best way to learn it…)"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nFirst Post!\n\n\n\nmisc\n\n\n\nMy first non-draft post! How I want to further develop this blog, and things that I want to do (but may or may not be abandoned as life changes)\n\n\n\n10/26/25\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "LICENSE.html",
@@ -14,18 +77,18 @@
     "text": "MIT License\nCopyright (c) 2024 Alan\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blogs",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
     "section": "",
     "text": "Hello there! Welcome to my corner of the internet, where I try post cool stuff I find in my life, opinions, thoughts, and some stuff that interests me. With my belief in free and open-source, all of the contents on this website are licensed under the MIT license unless otherwise stated."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Home",
+    "section": "Contact",
+    "text": "Contact\nFeel free to leave comments on the github repo for this blog!"
   },
   {
     "objectID": "index.html#about",
@@ -42,15 +105,15 @@
     "text": "See my latest blog posts!"
   },
   {
-    "objectID": "lessons/index.html",
-    "href": "lessons/index.html",
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
     "title": "616c616e",
     "section": "",
     "text": "THIS IS A DEAD PAGE, NO INBOUND LINKS\nLast updated 2025-06-07\nIt would probably be better to have a legit indexing system, but for now I’ll just have this be the index for the lessons I have.\n\nCalculus III"
   },
   {
-    "objectID": "lessons/index.html#lessons",
-    "href": "lessons/index.html#lessons",
+    "objectID": "notes/index.html#lessons",
+    "href": "notes/index.html#lessons",
     "title": "616c616e",
     "section": "",
     "text": "THIS IS A DEAD PAGE, NO INBOUND LINKS\nLast updated 2025-06-07\nIt would probably be better to have a legit indexing system, but for now I’ll just have this be the index for the lessons I have.\n\nCalculus III"
