@@ -1,2 +1,4 @@
 /.quarto/
 /public/
+
+**/*.quarto_ipynb

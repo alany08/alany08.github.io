@@ -1,7 +1,7 @@
 ---
 title: Home
 date: 2025-05-28
-date-modified: 2025-09-21
+date-modified: 2025-10-26
 description: "616c616e"
 listing:
   contents: blog/posts
@@ -19,6 +19,9 @@ Hello there! Welcome to my corner of the internet, where I try post cool stuff I
 in my life, opinions, thoughts, and some stuff that interests me. With my belief in
 free and open-source, all of the contents on this website are licensed under the [MIT
 license](LICENSE.qmd) unless otherwise stated.
+
+## Contact
+Feel free to leave comments on the [github repo](https://github.com/alany08/alany08.github.io) for this blog!
 
 ## About
 I'm usually a person who stays silent, and observes. I like thinking about big
