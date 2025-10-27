@@ -1,0 +1,21 @@
+---
+title: First Post!
+date: 2025-10-26
+description: "My first non-draft post! How I want to further develop this blog, and things that I want to do (but may or may not be abandoned as life changes)"
+categories: [misc]
+---
+
+![Cool sunset beacuse why not! This was taken by my drone on Oct 14th.](cool_sunset.jpg){.lightbox}
+
+## Welcome!
+I've created this blog quite a few months ago, and I've always wanted to use it to share my life and passion with others! However I've always put off making this blog, and putting real solid content into this blog, but I hope to change that starting now. Other than sharing my passion with this blog, I'd like this to be a space where I can share my knowledge, like my class notes and the tinkering I've done as I've tried to grasp concepts.
+
+## So.. What now...?
+I've recently gotten a few ideas that I might add to this blog site, and we'll see as we go. I don't know if I'll muster up enough motivation to add them, but they might work!
+
+ - Upload my Calc III notes to [the existing one](/notes/calc3)
+ - Document my science olympiad progress!
+ - Regularly post how the plants in my garden are doing
+ - Add small interactive experiences that revolve around one concept (maybe in the notes section?)
+ - Summarize what's happened in my life on a weekly basis
+ - Regurgitate the stuff I learn in here (they say, trying to teach something is the best way to learn it...)
