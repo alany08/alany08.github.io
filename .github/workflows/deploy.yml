@@ -22,8 +22,8 @@ jobs:
       - name: Copy _config.yml to public
         run: cp _config.yml public/
 
-      - name: Copy modules to public
-        run: cp -r modules public/
+#       - name: Copy modules to public
+#         run: cp -r modules public/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
