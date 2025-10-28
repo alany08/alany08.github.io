@@ -1,0 +1,39 @@
+---
+title: "15.8 Lagrange Multipliers"
+date: 2025-10-28
+tags: [calc3, notes]
+description: "Notes taken from West Valley College's Math 004A class, credits to my professor Steve Blasberg"
+---
+
+*Project object onto surface?*
+*! Please note that notes from 15.4-15.6 haven't been made yet, some stuff may need linking in here*
+
+### Main Question:
+**Find the abs min/max of $f(x, y)$ subject to a constraint, $g(x, y)$**
+- $g(x, y)$ is like a level curve, at $z = 0 = g(x,y)$
+
+### Defining stuff
+Let $g$ represent the curve that is represented by the intersection of $z=0$ and $g(x, y)$
+$\nabla f$ - the gradient of $f$, the direction at which $f$ increases the most, projected onto the $x$-$y$ plane
+$\nabla g$ - the gradient of $g$, the direction at which the ==boundary *surface*== increases the most (projected in $x$-$y$)
+- The boundary is given as a surface to aid in finding the normal to the ==boundary *curve*==
+
+### Visualizing what the gradient means
+If we make a topographical map of $f$, by taking the level curve of $f$ at a certain interval, the gradient vectors of the corresponding $z$ value would **always** be normal to the level curve.
+- The gradient vectors are **always** normal to the [[15.1 Graphs and Level Curves|level curve]] at the same $z$ value because you're trying to minimize the distance to the next [[15.1 Graphs and Level Curves|level curve]] at $z+dz$ , which is a straight line directly away, directly, hence normal.
+- By following these gradient vectors of $f$ at $z$ through different slices of $f$ you will eventually reach an extrema
+
+### How are gradients used to find the extrema
+**However** we are constrained by $g(x, y)=0$ (the ==boundary curve==), which, coincidentally, we also have the normal vectors to.
+As you follow the gradient vectors of $f$ and eventually reach the edge of the ==boundary curve== **without** turning back into the boundary afterwards, you have reached a local extrema! 
+- At this point, because it is a local extrema, that means that locally, at this $z$ value, the boundary curve and the level curve at the same $z$ value will share the same tangent
+- The fact that they share the same tangent, means that their normals, the ==gradient vectors==, will be pointing in the same direction.
+- See [[Gradient & Boundary Curve.excalidraw]] for a diagram where the ==boundary curve== only intersects once with the [[15.1 Graphs and Level Curves|level curve]]
+
+### Working backwards for a formula to find extrema
+Taking this logic backwards, to find the local extrema of a function $f(x, y)$ constrained by a level curve of $g(x, y)$ at $0$ (or technically any value, but for simplicity $0$), we simply search for when $\nabla f$ is the same direction of $\nabla g$ => $\nabla f = \lambda \nabla g$
+- The ration of $\nabla f$ and $\nabla g$ is $\lambda$ which is called the ==Lagrange Multiplier== - there is not really a physical use for this, it's just a useful number in math.
+- ~={red}[!] There still may be extrema WITHIN the constraint region, which can be found normally by setting $f_x(x, y)$ and $f_y(x, y)$, the partials, to $0$ which ensures that the tangent at that point is a flat plane (similar to Calc BC optimization)=~ -> [[15.7 Optimizing Multivariable Functions|More explanation]]
+
+**You may refer to this hand-drawn explanation below**
+![[Lagrange Multiplier.png]]

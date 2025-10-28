@@ -4,7 +4,15 @@ date: 2025-06-02
 date-modified: 2025-10-26
 ---
 
-*Once I find time, I'll simply upload the notes I took for my Calc III class, and refine them to be more readable for the public* 
+*Once I find time, I'll simply upload the notes I took for my Calc III class, and refine them to be more readable for the public*
+
+$\xrightarrow{}$ Currently in the process of uploading! Pardon the formatting, they're copy pasted from my obsidian vault.
+
+## Uploads!
+
+- [vector basics!](vector_basics.qmd)
+- [curvature and normal vectors](145_curvature_and_normal_vectors.qmd)
+- [lagrange multipliers...](158_lagrange_multipliers.qmd)
 
 ## Overview of Contents
 1. Vectors and 3d Space \

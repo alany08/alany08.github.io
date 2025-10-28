@@ -1,0 +1,37 @@
+---
+title: "14.5 Curvature and Normal Vectors"
+date: 2025-10-28
+tags: [calc3, notes]
+description: "Notes taken from West Valley College's Math 004A class, credits to my professor Steve Blasberg"
+---
+
+### [[Tangents & Normals.excalidraw|Tangents & Normals]]
+**Unit Tangent**
+Represents the direction in which the particle represented by $r(t)$ is traveling
+$\vec{T}(t)=\frac{\vec{r}'(t)}{||\vec{r}'(t)||}$
+
+**Unit Normal**
+Represents the direction in which the curve represented by $r(t)$ is curving towards
+$\vec{N}(t)=\frac{\vec{T}'(t)}{||\vec{T}'(t)||}$
+### [[Tangential & Normal Acceleration.excalidraw|Acceleration]]
+$A=r''(t)$ Obviously
+$A_N=\vec{proj}_N A$ and $A_T=\vec{proj}_T A$
+	*This makes a triangle, with A being the hypotenuse*
+Alternatively, you could use a formula for $A_T$ and use Pythagorean to find $A_N$
+$A_T=\frac{d}{dt}||\vec{v}(t)||$
+$A_N=\sqrt{A^2-A_T^2}$
+
+### Curvature & Radius of Curvature
+Curvature is represented by $\kappa$ kappa
+$\kappa = \frac{||\vec{T}'(t)||}{v(t)} = \frac{||\vec{v}(t) \times \vec{a}(t)||}{(v(t))^3}$ where $\vec{v}(t)$ is a vector (velocity) and $v(t)$ is scalar (speed)
+The radius of acceleration, $r$ is simply $\frac{1}{\kappa}$
+The circle of curvature is $r$ (radius of curvature) away from $\vec{r}(t)$ in the $\vec{N}(t)$ direction.
+$\vec{N}(t)$ is perpendicular to $\vec{v}(t)$
+
+### Misc
+**Projection**
+	Drops a vector down to another vector, like dropping down the hypotenuse to a side in a right triangle
+	$\vec{proj}_v a=\frac{\vec{a}\cdot\vec{v}}{||v||\cdot ||v||}\vec{v}$
+**Torsion ($\tau$)**
+	The speed at which $\vec{r}(t)$ rotates around $\vec{B}(t)$
+    $\tau(t) = -\vec{N}(t) \cdot \vec{B}'(t)$

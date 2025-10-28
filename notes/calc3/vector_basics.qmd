@@ -1,0 +1,31 @@
+---
+title: "Vector Basics"
+date: 2025-10-28
+tags: [calc3, notes]
+description: "Notes taken from West Valley College's Math 004A class, credits to my professor Steve Blasberg"
+---
+
+# Multivar (WestValley)
+## 08/26/2024
+- NOTE: First class! ^_^
+
+- Function $f(x)$ -> inputs to outputs, points (ordered pairs) on a coordinate plane
+    - These points can be expressed using vectors
+
+- Function $f(x, y)$ -> ordered **triples** on a coordinate **space**
+    - Generally to graph, we need to draw 3D projections onto 2D
+    - __RH rule__ coord system setup:
+        - X/Y are on the horizontal plane (coming out of the page)
+        - X axis as the one coming out of the page to you (as opposed to Y which you might think)
+        - 3D space: asymmetry if we swap axes (can't rotate through 4D)! We need some reference that is asymmetric in all three dimensions.
+        - Index finger +x, Middle finger +y, then thumb points +z.
+
+- General vector rules:
+    - $\mathbf{v} \cdot \mathbf{s}$ => multiply components, sum together products
+    - $\mathbf{v} + \mathbf{w}$ => add components
+    - Vector has no "position", only a displacement, with direction!
+    - Famous parallelogram rule for sum of vectors in standard position
+    - Subtraction: A - B = vector **from B, to A**
+    - ||v|| = sqrt(sum(vi**2))
+    - 3+D spaces, you can only find angle between vectors! (you can't get angle info from single components)
+    - u = ||u|| * <cos(alpha), cos(beta), cos(gamma)> (THIS IS ACTUALLY THE UNIT VECTOR !!!!)
