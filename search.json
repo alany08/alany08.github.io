@@ -7,25 +7,123 @@
     "text": "I like sunsets. I like clouds. I like sunsets with pretty clouds. These were all taken by me, with my casual photography equipment and skills (iPhone and a DJI drone)."
   },
   {
-    "objectID": "notes/calc3/vector_basics.html",
-    "href": "notes/calc3/vector_basics.html",
+    "objectID": "notes/calc3/notes/vector_basics.html",
+    "href": "notes/calc3/notes/vector_basics.html",
     "title": "Vector Basics",
     "section": "",
     "text": "NOTE: First class! ^_^\nFunction \\(f(x)\\) -&gt; inputs to outputs, points (ordered pairs) on a coordinate plane\n\nThese points can be expressed using vectors\n\nFunction \\(f(x, y)\\) -&gt; ordered triples on a coordinate space\n\nGenerally to graph, we need to draw 3D projections onto 2D\nRH rule coord system setup:\n\nX/Y are on the horizontal plane (coming out of the page)\nX axis as the one coming out of the page to you (as opposed to Y which you might think)\n3D space: asymmetry if we swap axes (can’t rotate through 4D)! We need some reference that is asymmetric in all three dimensions.\nIndex finger +x, Middle finger +y, then thumb points +z.\n\n\nGeneral vector rules:\n\n\\(\\mathbf{v} \\cdot \\mathbf{s}\\) =&gt; multiply components, sum together products\n\\(\\mathbf{v} + \\mathbf{w}\\) =&gt; add components\nVector has no “position”, only a displacement, with direction!\nFamous parallelogram rule for sum of vectors in standard position\nSubtraction: A - B = vector from B, to A\n||v|| = sqrt(sum(vi**2))\n3+D spaces, you can only find angle between vectors! (you can’t get angle info from single components)\nu = ||u|| * &lt;cos(alpha), cos(beta), cos(gamma)&gt; (THIS IS ACTUALLY THE UNIT VECTOR !!!!)"
   },
   {
-    "objectID": "notes/calc3/vector_basics.html#section",
-    "href": "notes/calc3/vector_basics.html#section",
+    "objectID": "notes/calc3/notes/vector_basics.html#section",
+    "href": "notes/calc3/notes/vector_basics.html#section",
     "title": "Vector Basics",
     "section": "",
     "text": "NOTE: First class! ^_^\nFunction \\(f(x)\\) -&gt; inputs to outputs, points (ordered pairs) on a coordinate plane\n\nThese points can be expressed using vectors\n\nFunction \\(f(x, y)\\) -&gt; ordered triples on a coordinate space\n\nGenerally to graph, we need to draw 3D projections onto 2D\nRH rule coord system setup:\n\nX/Y are on the horizontal plane (coming out of the page)\nX axis as the one coming out of the page to you (as opposed to Y which you might think)\n3D space: asymmetry if we swap axes (can’t rotate through 4D)! We need some reference that is asymmetric in all three dimensions.\nIndex finger +x, Middle finger +y, then thumb points +z.\n\n\nGeneral vector rules:\n\n\\(\\mathbf{v} \\cdot \\mathbf{s}\\) =&gt; multiply components, sum together products\n\\(\\mathbf{v} + \\mathbf{w}\\) =&gt; add components\nVector has no “position”, only a displacement, with direction!\nFamous parallelogram rule for sum of vectors in standard position\nSubtraction: A - B = vector from B, to A\n||v|| = sqrt(sum(vi**2))\n3+D spaces, you can only find angle between vectors! (you can’t get angle info from single components)\nu = ||u|| * &lt;cos(alpha), cos(beta), cos(gamma)&gt; (THIS IS ACTUALLY THE UNIT VECTOR !!!!)"
   },
   {
-    "objectID": "notes/calc3/158_lagrange_multipliers.html",
-    "href": "notes/calc3/158_lagrange_multipliers.html",
+    "objectID": "notes/calc3/notes/tangent_planes_and_linear_approximation.html",
+    "href": "notes/calc3/notes/tangent_planes_and_linear_approximation.html",
+    "title": "15.6 Tangent Planes and Linear Approximation",
+    "section": "",
+    "text": "Finding the tangent plane to a surface \\(f(x, y, z)=0\\) At the point \\((a, b, c...)\\) \\[\n\\boxed{f_x(a, b, c...)(x-a) + f_y(a, b, c...)(y-b) + f_z(a, b, c...)(z-c)... = 0}\n\\] I don’t know how to derive this neither do I want to \\(f_x\\), \\(f_y\\), \\(f_z\\) etc are partials\nSurface \\(z\\) at \\((a, b, f(a,b))\\): \\(z = f_x(a, b)(x-a) + f_y(a, b)(y-b) + f(a, b)\\)\nLinear approximation of \\(f(x, y)\\) at \\((x_1, y_1)\\) Create the tangent plane, and plug in values for \\((x_1, y_1)\\) - Similar to 2D Calculus\nApproximating \\(dz\\) You simply use \\(\\Delta x \\frac{\\partial z}{\\partial x} + \\Delta y \\frac{\\partial z}{\\partial y}...\\)"
+  },
+  {
+    "objectID": "notes/calc3/notes/optimizing_multivariable_functions.html",
+    "href": "notes/calc3/notes/optimizing_multivariable_functions.html",
+    "title": "616c616e",
+    "section": "",
+    "text": "\\(f_x = f_y = 0\\) critical point! \\(f_x\\) or \\(f_y\\) does not exist -&gt; critical point!\nHow do we find the local minima/maxima on a surface \\(f(x, y)\\)?\n\nReview: properties of local maxima/minima\n\nBigger/smaller than surrounding values\nNote that tangent plane is 0, and it is in fact where it changes sign\n\nMaxima: positive slope before, negative after\nMinima: negative slope before, positive after\n\nWhat about absolute maxima?\n\nThey must either be also local maxima, or else must be end behavior of the function.\n\nTangent plane flat, what does that mean?\n\nclearly partials in \\(x\\) and \\(y\\) must both be zero\ngradient \\(\\nabla\\) must be 0\n\\(\\dfrac{dy}{dx}=-\\dfrac{f_x}{f_y}\\)\nwhich is just \\(-\\dfrac{(\\nabla f)_x}{(\\nabla f)_y}\\) (keep in mind the subscript here is components of a vector, not partial derivatives) -&gt; neat to keep in mind\n\n\nSo, an initial naive technique for finding such local maxima/minima could be as follows:\n\nFind some \\(x\\) s.t. \\(f_x=0\\) and \\(x\\) is a local maxima/minima along \\(x\\) axis; using \\(f_x\\), find constraints on possible values of \\(y\\)\nAt an above value \\(y\\), test to make sure it’s also a maxima/minima along \\(y\\) axis, and reconcile the constraint on \\(x\\)\nWhat about a saddle point? Consider the middle of a hyperbolic paraboloid:\n\nLoc. minimum along one axis, loc. max along the other!!!\nHow do we deal with this???\n\n\nImproving this:\n\nSet \\(f_x=f_y=0\\), solve for \\((x, y, f)\\) -&gt; critical points\nIt turns out that concavity tests in one variable (using the second derivative, i.e. \\(f''(x)\\)) also scale to multiple variables!\n\nFor any given critical point \\((x_c, y_c)\\), \\(f_{xx}\\) and \\(f_{yy}\\) must be nonzero (otherwise these are inflections along \\(x\\) or \\(y\\) axes!) and have the same sign.\n\n\nSo, for a determinant \\(D \\coloneqq f_{xx}f_{yy}-f_{xy}f_{yx}\\) at a given point \\((x, y, f)\\), we can try a determinant test for well-behaving, twice-differentiable functions:\n\nBut remember Clairaut’s theorem for well-behaving functions: \\(f_{xy}=f_{yx}\\)!\nThus we have \\(D=f_{xx}f_{yy}-f_{xy}^2\\)\nThe determinant test states the following:\n\nIf \\(D &gt; 0\\):\n\n\\(f_{xx} &gt; 0 \\implies \\text{local }\\textbf{minimum}\\)\n\\(f_{xx} &lt; 0 \\implies \\text{local }\\textbf{maximum}\\)\n\nIf \\(D &lt; 0\\): we have a saddle point.\nIf \\(D=0\\), the test is inconclusive.\n\n\nFor absolute minima/maxima: it works the same as in 2D too!\n\nOnce we find critical points as above, we can survey the area immediately around the other (e.g. \\(y \\coloneqq y_c\\), \\(x\\in \\left[x-c, x+c\\right]\\) for some specified \\(c\\)) to check appropriate concavity"
+  },
+  {
+    "objectID": "notes/calc3/notes/lagrange_multipliers.html",
+    "href": "notes/calc3/notes/lagrange_multipliers.html",
     "title": "15.8 Lagrange Multipliers",
     "section": "",
     "text": "Project object onto surface? ! Please note that notes from 15.4-15.6 haven’t been made yet, some stuff may need linking in here\n\nMain Question:\nFind the abs min/max of \\(f(x, y)\\) subject to a constraint, \\(g(x, y)\\) - \\(g(x, y)\\) is like a level curve, at \\(z = 0 = g(x,y)\\)\n\n\nDefining stuff\nLet \\(g\\) represent the curve that is represented by the intersection of \\(z=0\\) and \\(g(x, y)\\) \\(\\nabla f\\) - the gradient of \\(f\\), the direction at which \\(f\\) increases the most, projected onto the \\(x\\)-\\(y\\) plane \\(\\nabla g\\) - the gradient of \\(g\\), the direction at which the ==boundary surface== increases the most (projected in \\(x\\)-\\(y\\)) - The boundary is given as a surface to aid in finding the normal to the ==boundary curve==\n\n\nVisualizing what the gradient means\nIf we make a topographical map of \\(f\\), by taking the level curve of \\(f\\) at a certain interval, the gradient vectors of the corresponding \\(z\\) value would always be normal to the level curve. - The gradient vectors are always normal to the [[15.1 Graphs and Level Curves|level curve]] at the same \\(z\\) value because you’re trying to minimize the distance to the next [[15.1 Graphs and Level Curves|level curve]] at \\(z+dz\\) , which is a straight line directly away, directly, hence normal. - By following these gradient vectors of \\(f\\) at \\(z\\) through different slices of \\(f\\) you will eventually reach an extrema\n\n\nHow are gradients used to find the extrema\nHowever we are constrained by \\(g(x, y)=0\\) (the ==boundary curve==), which, coincidentally, we also have the normal vectors to. As you follow the gradient vectors of \\(f\\) and eventually reach the edge of the ==boundary curve== without turning back into the boundary afterwards, you have reached a local extrema! - At this point, because it is a local extrema, that means that locally, at this \\(z\\) value, the boundary curve and the level curve at the same \\(z\\) value will share the same tangent - The fact that they share the same tangent, means that their normals, the ==gradient vectors==, will be pointing in the same direction. - See [[Gradient & Boundary Curve.excalidraw]] for a diagram where the ==boundary curve== only intersects once with the [[15.1 Graphs and Level Curves|level curve]]\n\n\nWorking backwards for a formula to find extrema\nTaking this logic backwards, to find the local extrema of a function \\(f(x, y)\\) constrained by a level curve of \\(g(x, y)\\) at \\(0\\) (or technically any value, but for simplicity \\(0\\)), we simply search for when \\(\\nabla f\\) is the same direction of \\(\\nabla g\\) =&gt; \\(\\nabla f = \\lambda \\nabla g\\) - The ration of \\(\\nabla f\\) and \\(\\nabla g\\) is \\(\\lambda\\) which is called the ==Lagrange Multiplier== - there is not really a physical use for this, it’s just a useful number in math. - ~={red}[!] There still may be extrema WITHIN the constraint region, which can be found normally by setting \\(f_x(x, y)\\) and \\(f_y(x, y)\\), the partials, to \\(0\\) which ensures that the tangent at that point is a flat plane (similar to Calc BC optimization)=~ -&gt; [[15.7 Optimizing Multivariable Functions|More explanation]]\nYou may refer to this hand-drawn explanation below ![[Lagrange Multiplier.png]]"
+  },
+  {
+    "objectID": "notes/calc3/notes/directional_derivatives_and_gradient.html",
+    "href": "notes/calc3/notes/directional_derivatives_and_gradient.html",
+    "title": "15.5 Directional Derivatives and the Gradient",
+    "section": "",
+    "text": "Gradient of a function \\(f(x, y)\\): The gradient of a 3d function reduces to a 2d vector \\(\\nabla f(x, y) = \\langle \\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y} \\rangle\\) This gives the direction of steepest ascent, or maximum \\(dz\\) The direction of maximum descent is the negative of this vector\nDirectional derivative of a function \\(f\\) at \\((x_1, y_1)\\) towards \\(\\langle x_2, y_2 \\rangle\\) Make sure to use the unit vector of the direction vector \\(\\nabla f(x, y)(x_1, y_1) \\cdot \\langle x_2, y_2 \\rangle\\) For direction of no change, the directional derivative = 0, which means the dot of gradient and direction vector = 0, which means just a vector orthogonal to the gradient vector\nThe gradient vector at \\((x, y)\\) is orthogonal to the derivative at the same point \\(\\frac{dy}{dx} = -\\frac{\\frac{\\partial}{\\partial x}}{\\frac{\\partial}{\\partial y}}\\) \\(\\nabla f = \\langle \\frac{\\partial}{\\partial x}, \\frac{\\partial}{\\partial y} \\rangle\\) happens to be the inverse negative of what would’ve been \\(dy\\) and \\(dx\\) for slope, \\(\\frac{dy}{dx}\\)"
+  },
+  {
+    "objectID": "notes/calc3/index.html",
+    "href": "notes/calc3/index.html",
+    "title": "Intro to Calc III",
+    "section": "",
+    "text": "vector basics!\ncurvature and normal vectors\ngraphs and level curves\nlimits and continuity\npartial derivatives\nchain rule\ndirectional derivatives and gradient\ntangent planes and linear approximation\noptimizing multivariable functions\nlagrange multipliers"
+  },
+  {
+    "objectID": "notes/calc3/index.html#my-messy-notes",
+    "href": "notes/calc3/index.html#my-messy-notes",
+    "title": "Intro to Calc III",
+    "section": "",
+    "text": "vector basics!\ncurvature and normal vectors\ngraphs and level curves\nlimits and continuity\npartial derivatives\nchain rule\ndirectional derivatives and gradient\ntangent planes and linear approximation\noptimizing multivariable functions\nlagrange multipliers"
+  },
+  {
+    "objectID": "notes/calc3/index.html#overview-of-contents",
+    "href": "notes/calc3/index.html#overview-of-contents",
+    "title": "Intro to Calc III",
+    "section": "Overview of Contents",
+    "text": "Overview of Contents\n\nVectors and 3d Space\n1.1 Vectors and Vector Fields\n1.2 Lines and Planes\n1.3 Parametric Functions and Curves\n1.4 Surfaces\n1.5 Coordinate Systems\n\nDifferentiation\n2.1 Partial Derivatives\n2.2 Chain Rule\n2.3 Gradient and Directional Derivatives\n2.4 Curl and Divergence\n2.5 Optimization\n\nIntegration\n3.1 Multiple Integrals\n3.2 Jacobian\n3.3 Line Integrals\n3.4 Surface and Flux Integrals\n3.5 Stoke’s and Divergence Theorem\n3.6 Green’s Theorem"
+  },
+  {
+    "objectID": "notes/calc3/index.html#vectors-and-3d-space",
+    "href": "notes/calc3/index.html#vectors-and-3d-space",
+    "title": "Intro to Calc III",
+    "section": "Vectors and 3d Space",
+    "text": "Vectors and 3d Space\n…"
+  },
+  {
+    "objectID": "notes/calc3/index.html#differentiation",
+    "href": "notes/calc3/index.html#differentiation",
+    "title": "Intro to Calc III",
+    "section": "Differentiation",
+    "text": "Differentiation\n…"
+  },
+  {
+    "objectID": "notes/calc3/index.html#integration",
+    "href": "notes/calc3/index.html#integration",
+    "title": "Intro to Calc III",
+    "section": "Integration",
+    "text": "Integration\n…"
+  },
+  {
+    "objectID": "blog/posts/first_post/index.html",
+    "href": "blog/posts/first_post/index.html",
+    "title": "First Post!",
+    "section": "",
+    "text": "Cool sunset beacuse why not! This was taken by my drone on Oct 14th."
+  },
+  {
+    "objectID": "blog/posts/first_post/index.html#welcome",
+    "href": "blog/posts/first_post/index.html#welcome",
+    "title": "First Post!",
+    "section": "Welcome!",
+    "text": "Welcome!\nI’ve created this blog quite a few months ago, and I’ve always wanted to use it to share my life and passion with others! However I’ve always put off making this blog, and putting real solid content into this blog, but I hope to change that starting now. Other than sharing my passion with this blog, I’d like this to be a space where I can share my knowledge, like my class notes and the tinkering I’ve done as I’ve tried to grasp concepts."
+  },
+  {
+    "objectID": "blog/posts/first_post/index.html#so..-what-now",
+    "href": "blog/posts/first_post/index.html#so..-what-now",
+    "title": "First Post!",
+    "section": "So.. What now…?",
+    "text": "So.. What now…?\nI’ve recently gotten a few ideas that I might add to this blog site, and we’ll see as we go. I don’t know if I’ll muster up enough motivation to add them, but they might work!\n\nUpload my Calc III notes to the existing one\nDocument my science olympiad progress!\nRegularly post how the plants in my garden are doing\nAdd small interactive experiences that revolve around one concept (maybe in the notes section?)\nSummarize what’s happened in my life on a weekly basis\nRegurgitate the stuff I learn in here (they say, trying to teach something is the best way to learn it…)"
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "License",
+    "section": "",
+    "text": "MIT License\nCopyright (c) 2024 Alan\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nFirst Post!\n\n\n\nMisc\n\n\n\nMy first non-draft post! How I want to further develop this blog, and things that I want to do (but may or may not be abandoned as life changes)\n\n\n\n10/26/25\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -56,88 +154,60 @@
     "text": "See my latest blog posts!"
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blogs",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nFirst Post!\n\n\n\nMisc\n\n\n\nMy first non-draft post! How I want to further develop this blog, and things that I want to do (but may or may not be abandoned as life changes)\n\n\n\n10/26/25\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "License",
-    "section": "",
-    "text": "MIT License\nCopyright (c) 2024 Alan\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
-  },
-  {
-    "objectID": "blog/posts/first_post/index.html",
-    "href": "blog/posts/first_post/index.html",
-    "title": "First Post!",
-    "section": "",
-    "text": "Cool sunset beacuse why not! This was taken by my drone on Oct 14th."
-  },
-  {
-    "objectID": "blog/posts/first_post/index.html#welcome",
-    "href": "blog/posts/first_post/index.html#welcome",
-    "title": "First Post!",
-    "section": "Welcome!",
-    "text": "Welcome!\nI’ve created this blog quite a few months ago, and I’ve always wanted to use it to share my life and passion with others! However I’ve always put off making this blog, and putting real solid content into this blog, but I hope to change that starting now. Other than sharing my passion with this blog, I’d like this to be a space where I can share my knowledge, like my class notes and the tinkering I’ve done as I’ve tried to grasp concepts."
-  },
-  {
-    "objectID": "blog/posts/first_post/index.html#so..-what-now",
-    "href": "blog/posts/first_post/index.html#so..-what-now",
-    "title": "First Post!",
-    "section": "So.. What now…?",
-    "text": "So.. What now…?\nI’ve recently gotten a few ideas that I might add to this blog site, and we’ll see as we go. I don’t know if I’ll muster up enough motivation to add them, but they might work!\n\nUpload my Calc III notes to the existing one\nDocument my science olympiad progress!\nRegularly post how the plants in my garden are doing\nAdd small interactive experiences that revolve around one concept (maybe in the notes section?)\nSummarize what’s happened in my life on a weekly basis\nRegurgitate the stuff I learn in here (they say, trying to teach something is the best way to learn it…)"
-  },
-  {
-    "objectID": "notes/calc3/145_curvature_and_normal_vectors.html",
-    "href": "notes/calc3/145_curvature_and_normal_vectors.html",
+    "objectID": "notes/calc3/notes/curvature_and_normal_vectors.html",
+    "href": "notes/calc3/notes/curvature_and_normal_vectors.html",
     "title": "14.5 Curvature and Normal Vectors",
     "section": "",
     "text": "[[Tangents & Normals.excalidraw|Tangents & Normals]]\nUnit Tangent Represents the direction in which the particle represented by \\(r(t)\\) is traveling \\(\\vec{T}(t)=\\frac{\\vec{r}'(t)}{||\\vec{r}'(t)||}\\)\nUnit Normal Represents the direction in which the curve represented by \\(r(t)\\) is curving towards \\(\\vec{N}(t)=\\frac{\\vec{T}'(t)}{||\\vec{T}'(t)||}\\) ### [[Tangential & Normal Acceleration.excalidraw|Acceleration]] \\(A=r''(t)\\) Obviously \\(A_N=\\vec{proj}_N A\\) and \\(A_T=\\vec{proj}_T A\\) This makes a triangle, with A being the hypotenuse Alternatively, you could use a formula for \\(A_T\\) and use Pythagorean to find \\(A_N\\) \\(A_T=\\frac{d}{dt}||\\vec{v}(t)||\\) \\(A_N=\\sqrt{A^2-A_T^2}\\)\n\n\nCurvature & Radius of Curvature\nCurvature is represented by \\(\\kappa\\) kappa \\(\\kappa = \\frac{||\\vec{T}'(t)||}{v(t)} = \\frac{||\\vec{v}(t) \\times \\vec{a}(t)||}{(v(t))^3}\\) where \\(\\vec{v}(t)\\) is a vector (velocity) and \\(v(t)\\) is scalar (speed) The radius of acceleration, \\(r\\) is simply \\(\\frac{1}{\\kappa}\\) The circle of curvature is \\(r\\) (radius of curvature) away from \\(\\vec{r}(t)\\) in the \\(\\vec{N}(t)\\) direction. \\(\\vec{N}(t)\\) is perpendicular to \\(\\vec{v}(t)\\)\n\n\nMisc\nProjection Drops a vector down to another vector, like dropping down the hypotenuse to a side in a right triangle \\(\\vec{proj}_v a=\\frac{\\vec{a}\\cdot\\vec{v}}{||v||\\cdot ||v||}\\vec{v}\\) Torsion (\\(\\tau\\)) The speed at which \\(\\vec{r}(t)\\) rotates around \\(\\vec{B}(t)\\) \\(\\tau(t) = -\\vec{N}(t) \\cdot \\vec{B}'(t)\\)"
   },
   {
-    "objectID": "notes/calc3/index.html",
-    "href": "notes/calc3/index.html",
-    "title": "Intro to Calc III",
+    "objectID": "notes/calc3/notes/graphs_and_level_curves.html",
+    "href": "notes/calc3/notes/graphs_and_level_curves.html",
+    "title": "15.1 Graphs and Level Curves",
     "section": "",
-    "text": "Once I find time, I’ll simply upload the notes I took for my Calc III class, and refine them to be more readable for the public\n\\(\\xrightarrow{}\\) Currently in the process of uploading! Pardon the formatting, they’re copy pasted from my obsidian vault."
+    "text": "Level curves - a family of surfaces related to a function\n\nLet \\(z = f(x, y)\\) then the level curve at \\(z=0\\) would be whatever \\(0=f(x, y)\\) simplifies to."
   },
   {
-    "objectID": "notes/calc3/index.html#uploads",
-    "href": "notes/calc3/index.html#uploads",
-    "title": "Intro to Calc III",
-    "section": "Uploads!",
-    "text": "Uploads!\n\nvector basics!\ncurvature and normal vectors\nlagrange multipliers…"
+    "objectID": "notes/calc3/notes/limits_and_continuity.html",
+    "href": "notes/calc3/notes/limits_and_continuity.html",
+    "title": "15.2 Limits and Continuity",
+    "section": "",
+    "text": "Limits\n\nInstead of intervals on each var getting smaller (\\(\\epsilon\\), \\(\\delta\\) proof), use circles.\n\nfor \\(z=c \\pm \\delta\\), lim \\((x, y)\\) to \\((a, b)\\), \\((x-a)^2+(y-b)^2 \\leq \\epsilon\\), letting \\(\\delta := \\sqrt{\\epsilon}\\)\n\nApproaching is no longer along just \\(+\\) or \\(-\\) – we can approach from not just any direction, but any curve!\n\nAppraching along \\(y=g(x)\\) then means adapting \\(f(x, y)\\) to \\(f(x, g(x))\\) and then taking a limit. Vice versa.\n\n\n\nWeird stuff\n\nSay \\(\\lim_\\limits{(x,y)\\to(0,0)} \\dfrac{x^2y}{x^4+y^2}\\) – if we approach along \\(x=0\\): limit \\(0\\). Same for any \\(y=mx\\).\n\nIntuitively, is the limit then \\(0\\)? – No!\n\nSay we approach along \\(y=x^2\\) –&gt; lim = \\(\\dfrac{1}{2}\\)!\n“Take the limit of \\(f(x, y)\\) along the left side of \\(y=g(x)\\)”"
   },
   {
-    "objectID": "notes/calc3/index.html#overview-of-contents",
-    "href": "notes/calc3/index.html#overview-of-contents",
-    "title": "Intro to Calc III",
-    "section": "Overview of Contents",
-    "text": "Overview of Contents\n\nVectors and 3d Space\n1.1 Vectors and Vector Fields\n1.2 Lines and Planes\n1.3 Parametric Functions and Curves\n1.4 Surfaces\n1.5 Coordinate Systems\n\nDifferentiation\n2.1 Partial Derivatives\n2.2 Chain Rule\n2.3 Gradient and Directional Derivatives\n2.4 Curl and Divergence\n2.5 Optimization\n\nIntegration\n3.1 Multiple Integrals\n3.2 Jacobian\n3.3 Line Integrals\n3.4 Surface and Flux Integrals\n3.5 Stoke’s and Divergence Theorem\n3.6 Green’s Theorem\n\nMaybe just a short intro that isn’t topic specific, or maybe intro that is split between the three general points"
+    "objectID": "notes/calc3/notes/partial_derivatives.html",
+    "href": "notes/calc3/notes/partial_derivatives.html",
+    "title": "15.3 Partial Derivatives",
+    "section": "",
+    "text": "The Derivative\n\nSlope of the tangent line, do you remember our “typical” definition? \\[\n\\lim_\\limits{h\\to0}\\dfrac{f(x+h)-f(x)}{h}\n\\]\nBut our lim def is weird; how can we possibly find this tangent line?\n\nA: Partial derivatives. ###### Partial derivatives\n\nSuppose that we take a slice along a constant value of \\(x\\) or \\(y\\) -&gt; then we can find the tangent line of the cross-section along this plane!\n\nThus, in (e.g.) \\(\\dfrac{\\partial z}{\\partial x}\\), we’re taking \\(\\dfrac{dz}{dx}\\) along a fixed slice \\(y=c\\).\nOperator wrapping: obviously \\(\\dfrac{\\partial}{\\partial x}\\dfrac{\\partial}{\\partial y}\\) -&gt; evaluate the \\(\\dfrac{\\partial}{\\partial y}\\) first.\n\nConsider function \\(z=f(x, y)\\) where \\(x(t)\\), \\(y(t)\\).\n\nWe can find \\(\\dfrac{df}{dt}\\):\n\nMethod 1: Replace all terms with respective functions of \\(t\\).\nWe can also use chain rule!\n\n\\(\\boxed{\\dfrac{df}{dt}=\\dfrac{\\partial{f}}{\\partial{x}}\\cdot\\dfrac{dx}{dt}+\\dfrac{\\partial{f}}{\\partial{y}}\\cdot\\dfrac{dy}{dt}}\\)\n\nThis causes the product rule: \\(f(x,y)=x^ny^m\\implies\\dfrac{df}{dt}=nx^{n-1}x'y+mxy^{m-1}y'\\)\nExtension works too, Df/Dx Dx/Dt dt/dv + … (permute it all out) -&gt; tree it out, each leaf ends with d/dk for ultimate differential variable \\(k\\).\n\n\n\n\n\nDirectional Derivatives\nTaking a derivative of the surface along a unit direction vector \\(\\overrightarrow{u}\\). - Formally: - Rather than doing limit on \\(f(a+h, b)-f(a, b)\\) and so on, the increment of \\(h\\) is along \\(\\overrightarrow{u}\\) - \\(\\left\\langle{}a,b\\right\\rangle{}+h\\left\\langle{}u_1,u_2\\right\\rangle\\) for \\(||\\overrightarrow{u}||=1\\). - \\(\\boxed{\\lim_\\limits{h\\to0}\\dfrac{f(a+hu_1,b+hu_2)-f(a,b)}{h}}\\) - For \\(\\partial{x}\\), \\(\\overrightarrow{u}=\\left\\langle 1, 0 \\right\\rangle\\), and etc. - Simplify the limit: - Let \\(g(h)\\coloneqq f(a+hu_1, b+hu_2)\\) - Limit goes to: \\(\\lim_\\limits{h\\to0}\\dfrac{g(0+h)-g(0)}{h}\\) - Which is \\(g'(0)\\)… - Which is \\(\\dfrac{\\partial f}{\\partial (x\\coloneqq a+hu_1)}u_1 + \\dfrac{\\partial f}{\\partial (y\\coloneqq b+hu_2)}u_2\\)… - Which then simplifies to \\(\\left\\langle \\dfrac{\\partial f}{\\partial x}, \\dfrac{\\partial f}{\\partial y}\\right\\rangle \\cdot \\left(\\overrightarrow{u}\\coloneqq \\left\\langle \\cos{\\theta}, \\sin{\\theta} \\right\\rangle\\right)\\)!! - Thus: \\[\n          \\boxed{D_{\\overrightarrow{u}}f=\\nabla_{x, y}f\\cdot\\overrightarrow{u}}\n          \\] - (Note: the gradient operator \\(\\nabla_{x, y}\\) is \\(\\left\\langle \\dfrac{\\partial}{\\partial x}, \\dfrac{\\partial}{\\partial y} \\right\\rangle\\), so \\(\\nabla_{x, y}f\\) just means \\(\\left\\langle \\dfrac{\\partial f}{\\partial x}, \\dfrac{\\partial f}{\\partial y} \\right\\rangle\\).) – direction of greatest increase/decrease."
   },
   {
-    "objectID": "notes/calc3/index.html#vectors-and-3d-space",
-    "href": "notes/calc3/index.html#vectors-and-3d-space",
-    "title": "Intro to Calc III",
-    "section": "Vectors and 3d Space",
-    "text": "Vectors and 3d Space\nBlah Blah Blah"
+    "objectID": "notes/calc3/notes/the_chain_rule.html",
+    "href": "notes/calc3/notes/the_chain_rule.html",
+    "title": "15.4 The Chain Rule",
+    "section": "",
+    "text": "Pretty similar to normal chain rule"
   },
   {
-    "objectID": "notes/calc3/index.html#differentiation",
-    "href": "notes/calc3/index.html#differentiation",
-    "title": "Intro to Calc III",
-    "section": "Differentiation",
-    "text": "Differentiation\nEEEEEE EEEE"
+    "objectID": "notes/calc3/notes/the_chain_rule.html#partial-chain-rule",
+    "href": "notes/calc3/notes/the_chain_rule.html#partial-chain-rule",
+    "title": "15.4 The Chain Rule",
+    "section": "Partial Chain Rule",
+    "text": "Partial Chain Rule\nLet \\(f(x, y) = z\\) be a function in terms of \\(x\\) and \\(y\\) Let \\(x\\) be a function of \\(s\\) and \\(t\\) Let \\(y\\) be a function of \\(s\\) and \\(t\\)\nThen, \\(\\frac{\\partial z}{\\partial s}\\) would be \\(\\frac{\\partial f}{\\partial x}\\frac{\\partial x}{\\partial s} + \\frac{\\partial f}{\\partial y}\\frac{\\partial y}{\\partial s}\\) \\(\\frac{\\partial z}{\\partial t}\\) would be the same thing, but instead of the partials of \\(x\\) and \\(y\\) in relation to \\(s\\), it would be in relation to \\(t\\)."
   },
   {
-    "objectID": "notes/calc3/index.html#integration",
-    "href": "notes/calc3/index.html#integration",
-    "title": "Intro to Calc III",
-    "section": "Integration",
-    "text": "Integration\nEEEEEEEEEEEfsd"
+    "objectID": "notes/calc3/notes/the_chain_rule.html#find-fracdydx-when-theres-z",
+    "href": "notes/calc3/notes/the_chain_rule.html#find-fracdydx-when-theres-z",
+    "title": "15.4 The Chain Rule",
+    "section": "Find \\(\\frac{dy}{dx}\\) when there’s \\(z\\)",
+    "text": "Find \\(\\frac{dy}{dx}\\) when there’s \\(z\\)\nLet \\(z\\) be a function of \\(x\\) and \\(y\\) Using the partials of \\(z\\) in terms vof \\(x\\) and \\(y\\): \\(\\frac{dy}{dx}\\) would be \\(-\\frac{\\frac{\\partial z}{\\partial x}}{\\frac{\\partial z}{\\partial y}}\\)or, \\(-\\frac{f_x}{f_y}\\)"
+  },
+  {
+    "objectID": "notes/calc3/notes/the_chain_rule.html#partial-2nd-derivative-chain-rule",
+    "href": "notes/calc3/notes/the_chain_rule.html#partial-2nd-derivative-chain-rule",
+    "title": "15.4 The Chain Rule",
+    "section": "Partial 2nd derivative Chain Rule",
+    "text": "Partial 2nd derivative Chain Rule\nLet \\(z\\) be a differentiable function of \\(x\\) and \\(y\\) Let \\(x\\) and \\(y\\) be differentiable functions of \\(s\\) and \\(t\\) Then: \\(\\frac{\\partial z}{\\partial s}=\\frac{\\partial z}{\\partial x}\\frac{\\partial x}{\\partial s} + \\frac{\\partial z}{\\partial y}\\frac{\\partial y}{\\partial s}\\) And: \\(\\frac{\\partial z}{\\partial t}=\\frac{\\partial z}{\\partial x}\\frac{\\partial x}{\\partial t} + \\frac{\\partial z}{\\partial y}\\frac{\\partial y}{\\partial t}\\) The second derivatives are \\(f_{ss}\\), \\(f_{st}\\), and \\(f_{tt}\\) From the previous formulas: \\(f_s = f_x x_s + f_y y_s\\) \\(f_t = f_x x_t + f_y y_t\\) \\(f_{ss}\\) would be \\((f_x x_s + f_y y_s)_s\\) \\(= (f_x)_s x_s + f_x x_{ss} + (f_y)_s y_s + f_y y_{ss}\\) \\(\\boxed{= (f_{xx}x_s + f_{xy}y_s)x_s + f_x x_{ss} + (f_{yx}x_s + f_{yy} y_s)y_s + f_y y_{ss}}\\) You could simplify that, but the grouping makes sense. Simply find these and plug: \\(f_x\\) \\(f_{xy}\\) \\(f_{xx}\\) \\(f_y\\) \\(f_{yx}\\) \\(f_{yy}\\) \\(x_s\\) \\(x_{ss}\\) \\(y_s\\) \\(y_{ss}\\) Deriving for \\(f_{st}\\) or \\(f_{tt}\\) would be a similar process"
   },
   {
     "objectID": "notes/index.html",

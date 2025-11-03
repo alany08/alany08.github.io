@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-10-28">
+<meta name="dcterms.date" content="2025-11-04">
 <meta name="description" content="Notes taken from West Valley College’s Math 004A class, credits to my professor Steve Blasberg">
 
-<title>Vector Basics – 616c616e</title>
+<title>15.6 Tangent Planes and Linear Approximation – 616c616e</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -101,7 +101,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../assets/css/styles.css">
+<link rel="stylesheet" href="../../../assets/css/styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -111,9 +111,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">616c616e</span>
     </a>
   </div>
@@ -124,7 +124,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
+    <a class="nav-link" href="../../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -133,7 +133,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cool-stuff">    
         <li>
-    <a class="dropdown-item" href="../../stuffs/sunsets/index.html">
+    <a class="dropdown-item" href="../../../stuffs/sunsets/index.html">
  <span class="dropdown-text">Sunsets</span></a>
   </li>  
     </ul>
@@ -144,7 +144,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li>
-    <a class="dropdown-item" href="../../notes/calc3/index.html">
+    <a class="dropdown-item" href="../../../notes/calc3/index.html">
  <span class="dropdown-text">Calc III</span></a>
   </li>  
     </ul>
@@ -160,24 +160,15 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#multivar-westvalley" id="toc-multivar-westvalley" class="nav-link active" data-scroll-target="#multivar-westvalley">Multivar (WestValley)</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">08/26/2024</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Vector Basics</h1>
+<h1 class="title">15.6 Tangent Planes and Linear Approximation</h1>
 </div>
 
 <div>
@@ -187,13 +178,13 @@ window.Quarto = {
 </div>
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 28, 2025</p>
+      <p class="date">November 4, 2025</p>
     </div>
   </div>
   
@@ -205,43 +196,14 @@ window.Quarto = {
 </header>
 
 
-<section id="multivar-westvalley" class="level1">
-<h1>Multivar (WestValley)</h1>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">08/26/2024</h2>
-<ul>
-<li><p>NOTE: First class! ^_^</p></li>
-<li><p>Function <span class="math inline">\(f(x)\)</span> -&gt; inputs to outputs, points (ordered pairs) on a coordinate plane</p>
-<ul>
-<li>These points can be expressed using vectors</li>
-</ul></li>
-<li><p>Function <span class="math inline">\(f(x, y)\)</span> -&gt; ordered <strong>triples</strong> on a coordinate <strong>space</strong></p>
-<ul>
-<li>Generally to graph, we need to draw 3D projections onto 2D</li>
-<li><strong>RH rule</strong> coord system setup:
-<ul>
-<li>X/Y are on the horizontal plane (coming out of the page)</li>
-<li>X axis as the one coming out of the page to you (as opposed to Y which you might think)</li>
-<li>3D space: asymmetry if we swap axes (can’t rotate through 4D)! We need some reference that is asymmetric in all three dimensions.</li>
-<li>Index finger +x, Middle finger +y, then thumb points +z.</li>
-</ul></li>
-</ul></li>
-<li><p>General vector rules:</p>
-<ul>
-<li><span class="math inline">\(\mathbf{v} \cdot \mathbf{s}\)</span> =&gt; multiply components, sum together products</li>
-<li><span class="math inline">\(\mathbf{v} + \mathbf{w}\)</span> =&gt; add components</li>
-<li>Vector has no “position”, only a displacement, with direction!</li>
-<li>Famous parallelogram rule for sum of vectors in standard position</li>
-<li>Subtraction: A - B = vector <strong>from B, to A</strong></li>
-<li>||v|| = sqrt(sum(vi**2))</li>
-<li>3+D spaces, you can only find angle between vectors! (you can’t get angle info from single components)</li>
-<li>u = ||u|| * &lt;cos(alpha), cos(beta), cos(gamma)&gt; (THIS IS ACTUALLY THE UNIT VECTOR !!!!)</li>
-</ul></li>
-</ul>
+<p><strong>Finding the tangent plane to a surface <span class="math inline">\(f(x, y, z)=0\)</span></strong> At the point <span class="math inline">\((a, b, c...)\)</span> <span class="math display">\[
+\boxed{f_x(a, b, c...)(x-a) + f_y(a, b, c...)(y-b) + f_z(a, b, c...)(z-c)... = 0}
+\]</span> <em>I don’t know how to derive this neither do I want to</em> <span class="math inline">\(f_x\)</span>, <span class="math inline">\(f_y\)</span>, <span class="math inline">\(f_z\)</span> etc are partials</p>
+<p>Surface <span class="math inline">\(z\)</span> at <span class="math inline">\((a, b, f(a,b))\)</span>: <span class="math inline">\(z = f_x(a, b)(x-a) + f_y(a, b)(y-b) + f(a, b)\)</span></p>
+<p><strong>Linear approximation of <span class="math inline">\(f(x, y)\)</span> at <span class="math inline">\((x_1, y_1)\)</span></strong> Create the tangent plane, and plug in values for <span class="math inline">\((x_1, y_1)\)</span> - Similar to 2D Calculus</p>
+<p><strong>Approximating <span class="math inline">\(dz\)</span></strong> You simply use <span class="math inline">\(\Delta x \frac{\partial z}{\partial x} + \Delta y \frac{\partial z}{\partial y}...\)</span></p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

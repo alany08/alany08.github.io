@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-10-28">
+<meta name="dcterms.date" content="2025-11-04">
 <meta name="description" content="Notes taken from West Valley College’s Math 004A class, credits to my professor Steve Blasberg">
 
-<title>15.8 Lagrange Multipliers – 616c616e</title>
+<title>15.1 Graphs and Level Curves – 616c616e</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -101,7 +101,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../assets/css/styles.css">
+<link rel="stylesheet" href="../../../assets/css/styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -111,9 +111,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">616c616e</span>
     </a>
   </div>
@@ -124,7 +124,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
+    <a class="nav-link" href="../../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -133,7 +133,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cool-stuff">    
         <li>
-    <a class="dropdown-item" href="../../stuffs/sunsets/index.html">
+    <a class="dropdown-item" href="../../../stuffs/sunsets/index.html">
  <span class="dropdown-text">Sunsets</span></a>
   </li>  
     </ul>
@@ -144,7 +144,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li>
-    <a class="dropdown-item" href="../../notes/calc3/index.html">
+    <a class="dropdown-item" href="../../../notes/calc3/index.html">
  <span class="dropdown-text">Calc III</span></a>
   </li>  
     </ul>
@@ -165,11 +165,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#main-question" id="toc-main-question" class="nav-link active" data-scroll-target="#main-question">Main Question:</a></li>
-  <li><a href="#defining-stuff" id="toc-defining-stuff" class="nav-link" data-scroll-target="#defining-stuff">Defining stuff</a></li>
-  <li><a href="#visualizing-what-the-gradient-means" id="toc-visualizing-what-the-gradient-means" class="nav-link" data-scroll-target="#visualizing-what-the-gradient-means">Visualizing what the gradient means</a></li>
-  <li><a href="#how-are-gradients-used-to-find-the-extrema" id="toc-how-are-gradients-used-to-find-the-extrema" class="nav-link" data-scroll-target="#how-are-gradients-used-to-find-the-extrema">How are gradients used to find the extrema</a></li>
-  <li><a href="#working-backwards-for-a-formula-to-find-extrema" id="toc-working-backwards-for-a-formula-to-find-extrema" class="nav-link" data-scroll-target="#working-backwards-for-a-formula-to-find-extrema">Working backwards for a formula to find extrema</a></li>
+  <li><a href="#level-curves---a-family-of-surfaces-related-to-a-function" id="toc-level-curves---a-family-of-surfaces-related-to-a-function" class="nav-link active" data-scroll-target="#level-curves---a-family-of-surfaces-related-to-a-function">Level curves - a family of surfaces related to a function</a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +174,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">15.8 Lagrange Multipliers</h1>
+<h1 class="title">15.1 Graphs and Level Curves</h1>
 </div>
 
 <div>
@@ -194,7 +190,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 28, 2025</p>
+      <p class="date">November 4, 2025</p>
     </div>
   </div>
   
@@ -206,27 +202,11 @@ window.Quarto = {
 </header>
 
 
-<p><em>Project object onto surface?</em> <em>! Please note that notes from 15.4-15.6 haven’t been made yet, some stuff may need linking in here</em></p>
-<section id="main-question" class="level3">
-<h3 class="anchored" data-anchor-id="main-question">Main Question:</h3>
-<p><strong>Find the abs min/max of <span class="math inline">\(f(x, y)\)</span> subject to a constraint, <span class="math inline">\(g(x, y)\)</span></strong> - <span class="math inline">\(g(x, y)\)</span> is like a level curve, at <span class="math inline">\(z = 0 = g(x,y)\)</span></p>
-</section>
-<section id="defining-stuff" class="level3">
-<h3 class="anchored" data-anchor-id="defining-stuff">Defining stuff</h3>
-<p>Let <span class="math inline">\(g\)</span> represent the curve that is represented by the intersection of <span class="math inline">\(z=0\)</span> and <span class="math inline">\(g(x, y)\)</span> <span class="math inline">\(\nabla f\)</span> - the gradient of <span class="math inline">\(f\)</span>, the direction at which <span class="math inline">\(f\)</span> increases the most, projected onto the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane <span class="math inline">\(\nabla g\)</span> - the gradient of <span class="math inline">\(g\)</span>, the direction at which the ==boundary <em>surface</em>== increases the most (projected in <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span>) - The boundary is given as a surface to aid in finding the normal to the ==boundary <em>curve</em>==</p>
-</section>
-<section id="visualizing-what-the-gradient-means" class="level3">
-<h3 class="anchored" data-anchor-id="visualizing-what-the-gradient-means">Visualizing what the gradient means</h3>
-<p>If we make a topographical map of <span class="math inline">\(f\)</span>, by taking the level curve of <span class="math inline">\(f\)</span> at a certain interval, the gradient vectors of the corresponding <span class="math inline">\(z\)</span> value would <strong>always</strong> be normal to the level curve. - The gradient vectors are <strong>always</strong> normal to the [[15.1 Graphs and Level Curves|level curve]] at the same <span class="math inline">\(z\)</span> value because you’re trying to minimize the distance to the next [[15.1 Graphs and Level Curves|level curve]] at <span class="math inline">\(z+dz\)</span> , which is a straight line directly away, directly, hence normal. - By following these gradient vectors of <span class="math inline">\(f\)</span> at <span class="math inline">\(z\)</span> through different slices of <span class="math inline">\(f\)</span> you will eventually reach an extrema</p>
-</section>
-<section id="how-are-gradients-used-to-find-the-extrema" class="level3">
-<h3 class="anchored" data-anchor-id="how-are-gradients-used-to-find-the-extrema">How are gradients used to find the extrema</h3>
-<p><strong>However</strong> we are constrained by <span class="math inline">\(g(x, y)=0\)</span> (the ==boundary curve==), which, coincidentally, we also have the normal vectors to. As you follow the gradient vectors of <span class="math inline">\(f\)</span> and eventually reach the edge of the ==boundary curve== <strong>without</strong> turning back into the boundary afterwards, you have reached a local extrema! - At this point, because it is a local extrema, that means that locally, at this <span class="math inline">\(z\)</span> value, the boundary curve and the level curve at the same <span class="math inline">\(z\)</span> value will share the same tangent - The fact that they share the same tangent, means that their normals, the ==gradient vectors==, will be pointing in the same direction. - See [[Gradient &amp; Boundary Curve.excalidraw]] for a diagram where the ==boundary curve== only intersects once with the [[15.1 Graphs and Level Curves|level curve]]</p>
-</section>
-<section id="working-backwards-for-a-formula-to-find-extrema" class="level3">
-<h3 class="anchored" data-anchor-id="working-backwards-for-a-formula-to-find-extrema">Working backwards for a formula to find extrema</h3>
-<p>Taking this logic backwards, to find the local extrema of a function <span class="math inline">\(f(x, y)\)</span> constrained by a level curve of <span class="math inline">\(g(x, y)\)</span> at <span class="math inline">\(0\)</span> (or technically any value, but for simplicity <span class="math inline">\(0\)</span>), we simply search for when <span class="math inline">\(\nabla f\)</span> is the same direction of <span class="math inline">\(\nabla g\)</span> =&gt; <span class="math inline">\(\nabla f = \lambda \nabla g\)</span> - The ration of <span class="math inline">\(\nabla f\)</span> and <span class="math inline">\(\nabla g\)</span> is <span class="math inline">\(\lambda\)</span> which is called the ==Lagrange Multiplier== - there is not really a physical use for this, it’s just a useful number in math. - ~={red}[!] There still may be extrema WITHIN the constraint region, which can be found normally by setting <span class="math inline">\(f_x(x, y)\)</span> and <span class="math inline">\(f_y(x, y)\)</span>, the partials, to <span class="math inline">\(0\)</span> which ensures that the tangent at that point is a flat plane (similar to Calc BC optimization)=~ -&gt; [[15.7 Optimizing Multivariable Functions|More explanation]]</p>
-<p><strong>You may refer to this hand-drawn explanation below</strong> ![[Lagrange Multiplier.png]]</p>
+<section id="level-curves---a-family-of-surfaces-related-to-a-function" class="level1">
+<h1>Level curves - a family of surfaces related to a function</h1>
+<ul>
+<li>Let <span class="math inline">\(z = f(x, y)\)</span> then the level curve at <span class="math inline">\(z=0\)</span> would be whatever <span class="math inline">\(0=f(x, y)\)</span> simplifies to.</li>
+</ul>
 
 
 </section>

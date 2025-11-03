@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-06-02">
+<meta name="dcterms.date" content="2025-10-28">
+<meta name="description" content="Notes taken from West Valley College’s Math 004A class, credits to my professor Steve Blasberg">
 
-<title>Intro to Calc III – 616c616e</title>
+<title>Vector Basics – 616c616e</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,8 +71,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../assets/css/styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../assets/css/styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -81,9 +111,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">616c616e</span>
     </a>
   </div>
@@ -94,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
+    <a class="nav-link" href="../../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -103,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cool-stuff">    
         <li>
-    <a class="dropdown-item" href="../../stuffs/sunsets/index.html">
+    <a class="dropdown-item" href="../../../stuffs/sunsets/index.html">
  <span class="dropdown-text">Sunsets</span></a>
   </li>  
     </ul>
@@ -114,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li>
-    <a class="dropdown-item" href="../../notes/calc3/index.html">
+    <a class="dropdown-item" href="../../../notes/calc3/index.html">
  <span class="dropdown-text">Calc III</span></a>
   </li>  
     </ul>
@@ -135,11 +165,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#my-messy-notes" id="toc-my-messy-notes" class="nav-link active" data-scroll-target="#my-messy-notes">My Messy Notes</a></li>
-  <li><a href="#overview-of-contents" id="toc-overview-of-contents" class="nav-link" data-scroll-target="#overview-of-contents">Overview of Contents</a></li>
-  <li><a href="#vectors-and-3d-space" id="toc-vectors-and-3d-space" class="nav-link" data-scroll-target="#vectors-and-3d-space">Vectors and 3d Space</a></li>
-  <li><a href="#differentiation" id="toc-differentiation" class="nav-link" data-scroll-target="#differentiation">Differentiation</a></li>
-  <li><a href="#integration" id="toc-integration" class="nav-link" data-scroll-target="#integration">Integration</a></li>
+  <li><a href="#multivar-westvalley" id="toc-multivar-westvalley" class="nav-link active" data-scroll-target="#multivar-westvalley">Multivar (WestValley)</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">08/26/2024</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -148,9 +177,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Intro to Calc III</h1>
+<h1 class="title">Vector Basics</h1>
 </div>
 
+<div>
+  <div class="description">
+    Notes taken from West Valley College’s Math 004A class, credits to my professor Steve Blasberg
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-page-left">
@@ -159,16 +193,10 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 2, 2025</p>
+      <p class="date">October 28, 2025</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 4, 2025</p>
-    </div>
-  </div>
     
   </div>
   
@@ -177,60 +205,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="my-messy-notes" class="level2">
-<h2 class="anchored" data-anchor-id="my-messy-notes">My Messy Notes</h2>
+<section id="multivar-westvalley" class="level1">
+<h1>Multivar (WestValley)</h1>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">08/26/2024</h2>
 <ul>
-<li><a href="../../notes/calc3/notes/vector_basics.html">vector basics!</a></li>
-<li><a href="../../notes/calc3/notes/curvature_and_normal_vectors.html">curvature and normal vectors</a></li>
-<li><a href="../../notes/calc3/notes/graphs_and_level_curves.html">graphs and level curves</a></li>
-<li><a href="../../notes/calc3/notes/limits_and_continuity.html">limits and continuity</a></li>
-<li><a href="../../notes/calc3/notes/partial_derivatives.html">partial derivatives</a></li>
-<li><a href="../../notes/calc3/notes/the_chain_rule.html">chain rule</a></li>
-<li><a href="../../notes/calc3/notes/directional_derivatives_and_gradient.html">directional derivatives and gradient</a></li>
-<li><a href="../../notes/calc3/notes/tangent_planes_and_linear_approximation.html">tangent planes and linear approximation</a></li>
-<li><a href="../../notes/calc3/notes/optimizing_multivariable_functions.html">optimizing multivariable functions</a></li>
-<li><a href="../../notes/calc3/notes/lagrange_multipliers.html">lagrange multipliers</a></li>
+<li><p>NOTE: First class! ^_^</p></li>
+<li><p>Function <span class="math inline">\(f(x)\)</span> -&gt; inputs to outputs, points (ordered pairs) on a coordinate plane</p>
+<ul>
+<li>These points can be expressed using vectors</li>
+</ul></li>
+<li><p>Function <span class="math inline">\(f(x, y)\)</span> -&gt; ordered <strong>triples</strong> on a coordinate <strong>space</strong></p>
+<ul>
+<li>Generally to graph, we need to draw 3D projections onto 2D</li>
+<li><strong>RH rule</strong> coord system setup:
+<ul>
+<li>X/Y are on the horizontal plane (coming out of the page)</li>
+<li>X axis as the one coming out of the page to you (as opposed to Y which you might think)</li>
+<li>3D space: asymmetry if we swap axes (can’t rotate through 4D)! We need some reference that is asymmetric in all three dimensions.</li>
+<li>Index finger +x, Middle finger +y, then thumb points +z.</li>
+</ul></li>
+</ul></li>
+<li><p>General vector rules:</p>
+<ul>
+<li><span class="math inline">\(\mathbf{v} \cdot \mathbf{s}\)</span> =&gt; multiply components, sum together products</li>
+<li><span class="math inline">\(\mathbf{v} + \mathbf{w}\)</span> =&gt; add components</li>
+<li>Vector has no “position”, only a displacement, with direction!</li>
+<li>Famous parallelogram rule for sum of vectors in standard position</li>
+<li>Subtraction: A - B = vector <strong>from B, to A</strong></li>
+<li>||v|| = sqrt(sum(vi**2))</li>
+<li>3+D spaces, you can only find angle between vectors! (you can’t get angle info from single components)</li>
+<li>u = ||u|| * &lt;cos(alpha), cos(beta), cos(gamma)&gt; (THIS IS ACTUALLY THE UNIT VECTOR !!!!)</li>
+</ul></li>
 </ul>
-</section>
-<section id="overview-of-contents" class="level2">
-<h2 class="anchored" data-anchor-id="overview-of-contents">Overview of Contents</h2>
-<ol type="1">
-<li>Vectors and 3d Space<br>
-1.1 Vectors and Vector Fields<br>
-1.2 Lines and Planes<br>
-1.3 Parametric Functions and Curves<br>
-1.4 Surfaces<br>
-1.5 Coordinate Systems<br>
-</li>
-<li>Differentiation<br>
-2.1 Partial Derivatives<br>
-2.2 Chain Rule<br>
-2.3 Gradient and Directional Derivatives<br>
-2.4 Curl and Divergence<br>
-2.5 Optimization<br>
-</li>
-<li>Integration<br>
-3.1 Multiple Integrals<br>
-3.2 Jacobian<br>
-3.3 Line Integrals<br>
-3.4 Surface and Flux Integrals<br>
-3.5 Stoke’s and Divergence Theorem<br>
-3.6 Green’s Theorem</li>
-</ol>
-</section>
-<section id="vectors-and-3d-space" class="level2">
-<h2 class="anchored" data-anchor-id="vectors-and-3d-space">Vectors and 3d Space</h2>
-<p>…</p>
-</section>
-<section id="differentiation" class="level2">
-<h2 class="anchored" data-anchor-id="differentiation">Differentiation</h2>
-<p>…</p>
-</section>
-<section id="integration" class="level2">
-<h2 class="anchored" data-anchor-id="integration">Integration</h2>
-<p>…</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

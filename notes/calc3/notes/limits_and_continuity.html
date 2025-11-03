@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-10-28">
+<meta name="dcterms.date" content="2025-11-04">
 <meta name="description" content="Notes taken from West Valley College’s Math 004A class, credits to my professor Steve Blasberg">
 
-<title>14.5 Curvature and Normal Vectors – 616c616e</title>
+<title>15.2 Limits and Continuity – 616c616e</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -101,7 +101,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../assets/css/styles.css">
+<link rel="stylesheet" href="../../../assets/css/styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -111,9 +111,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">616c616e</span>
     </a>
   </div>
@@ -124,7 +124,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
+    <a class="nav-link" href="../../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -133,7 +133,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cool-stuff">    
         <li>
-    <a class="dropdown-item" href="../../stuffs/sunsets/index.html">
+    <a class="dropdown-item" href="../../../stuffs/sunsets/index.html">
  <span class="dropdown-text">Sunsets</span></a>
   </li>  
     </ul>
@@ -144,7 +144,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li>
-    <a class="dropdown-item" href="../../notes/calc3/index.html">
+    <a class="dropdown-item" href="../../../notes/calc3/index.html">
  <span class="dropdown-text">Calc III</span></a>
   </li>  
     </ul>
@@ -160,23 +160,15 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#tangents-normals.excalidrawtangents-normals" id="toc-tangents-normals.excalidrawtangents-normals" class="nav-link active" data-scroll-target="#tangents-normals.excalidrawtangents-normals">[[Tangents &amp; Normals.excalidraw|Tangents &amp; Normals]]</a></li>
-  <li><a href="#curvature-radius-of-curvature" id="toc-curvature-radius-of-curvature" class="nav-link" data-scroll-target="#curvature-radius-of-curvature">Curvature &amp; Radius of Curvature</a></li>
-  <li><a href="#misc" id="toc-misc" class="nav-link" data-scroll-target="#misc">Misc</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">14.5 Curvature and Normal Vectors</h1>
+<h1 class="title">15.2 Limits and Continuity</h1>
 </div>
 
 <div>
@@ -186,13 +178,13 @@ window.Quarto = {
 </div>
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 28, 2025</p>
+      <p class="date">November 4, 2025</p>
     </div>
   </div>
   
@@ -204,20 +196,33 @@ window.Quarto = {
 </header>
 
 
-<section id="tangents-normals.excalidrawtangents-normals" class="level3">
-<h3 class="anchored" data-anchor-id="tangents-normals.excalidrawtangents-normals">[[Tangents &amp; Normals.excalidraw|Tangents &amp; Normals]]</h3>
-<p><strong>Unit Tangent</strong> Represents the direction in which the particle represented by <span class="math inline">\(r(t)\)</span> is traveling <span class="math inline">\(\vec{T}(t)=\frac{\vec{r}'(t)}{||\vec{r}'(t)||}\)</span></p>
-<p><strong>Unit Normal</strong> Represents the direction in which the curve represented by <span class="math inline">\(r(t)\)</span> is curving towards <span class="math inline">\(\vec{N}(t)=\frac{\vec{T}'(t)}{||\vec{T}'(t)||}\)</span> ### [[Tangential &amp; Normal Acceleration.excalidraw|Acceleration]] <span class="math inline">\(A=r''(t)\)</span> Obviously <span class="math inline">\(A_N=\vec{proj}_N A\)</span> and <span class="math inline">\(A_T=\vec{proj}_T A\)</span> <em>This makes a triangle, with A being the hypotenuse</em> Alternatively, you could use a formula for <span class="math inline">\(A_T\)</span> and use Pythagorean to find <span class="math inline">\(A_N\)</span> <span class="math inline">\(A_T=\frac{d}{dt}||\vec{v}(t)||\)</span> <span class="math inline">\(A_N=\sqrt{A^2-A_T^2}\)</span></p>
-</section>
-<section id="curvature-radius-of-curvature" class="level3">
-<h3 class="anchored" data-anchor-id="curvature-radius-of-curvature">Curvature &amp; Radius of Curvature</h3>
-<p>Curvature is represented by <span class="math inline">\(\kappa\)</span> kappa <span class="math inline">\(\kappa = \frac{||\vec{T}'(t)||}{v(t)} = \frac{||\vec{v}(t) \times \vec{a}(t)||}{(v(t))^3}\)</span> where <span class="math inline">\(\vec{v}(t)\)</span> is a vector (velocity) and <span class="math inline">\(v(t)\)</span> is scalar (speed) The radius of acceleration, <span class="math inline">\(r\)</span> is simply <span class="math inline">\(\frac{1}{\kappa}\)</span> The circle of curvature is <span class="math inline">\(r\)</span> (radius of curvature) away from <span class="math inline">\(\vec{r}(t)\)</span> in the <span class="math inline">\(\vec{N}(t)\)</span> direction. <span class="math inline">\(\vec{N}(t)\)</span> is perpendicular to <span class="math inline">\(\vec{v}(t)\)</span></p>
-</section>
-<section id="misc" class="level3">
-<h3 class="anchored" data-anchor-id="misc">Misc</h3>
-<p><strong>Projection</strong> Drops a vector down to another vector, like dropping down the hypotenuse to a side in a right triangle <span class="math inline">\(\vec{proj}_v a=\frac{\vec{a}\cdot\vec{v}}{||v||\cdot ||v||}\vec{v}\)</span> <strong>Torsion (<span class="math inline">\(\tau\)</span>)</strong> The speed at which <span class="math inline">\(\vec{r}(t)\)</span> rotates around <span class="math inline">\(\vec{B}(t)\)</span> <span class="math inline">\(\tau(t) = -\vec{N}(t) \cdot \vec{B}'(t)\)</span></p>
+<section id="limits" class="level4">
+<h4 class="anchored" data-anchor-id="limits">Limits</h4>
+<ul>
+<li>Instead of <em>intervals</em> on each var getting smaller (<span class="math inline">\(\epsilon\)</span>, <span class="math inline">\(\delta\)</span> proof), use <em>circles</em>.
+<ul>
+<li>for <span class="math inline">\(z=c \pm \delta\)</span>, lim <span class="math inline">\((x, y)\)</span> to <span class="math inline">\((a, b)\)</span>, <span class="math inline">\((x-a)^2+(y-b)^2 \leq \epsilon\)</span>, letting <span class="math inline">\(\delta := \sqrt{\epsilon}\)</span></li>
+</ul></li>
+<li>Approaching is no longer along just <span class="math inline">\(+\)</span> or <span class="math inline">\(-\)</span> – we can approach from not just any <em>direction</em>, but any curve!
+<ul>
+<li>Appraching along <span class="math inline">\(y=g(x)\)</span> then means adapting <span class="math inline">\(f(x, y)\)</span> to <span class="math inline">\(f(x, g(x))\)</span> and then taking a limit. Vice versa.</li>
+</ul></li>
+</ul>
+<section id="weird-stuff" class="level6">
+<h6 class="anchored" data-anchor-id="weird-stuff">Weird stuff</h6>
+<ul>
+<li>Say <span class="math inline">\(\lim_\limits{(x,y)\to(0,0)} \dfrac{x^2y}{x^4+y^2}\)</span> – if we approach along <span class="math inline">\(x=0\)</span>: limit <span class="math inline">\(0\)</span>. Same for any <span class="math inline">\(y=mx\)</span>.
+<ul>
+<li>Intuitively, is the limit then <span class="math inline">\(0\)</span>? – <strong>No!</strong>
+<ul>
+<li>Say we approach along <span class="math inline">\(y=x^2\)</span> –&gt; lim = <span class="math inline">\(\dfrac{1}{2}\)</span>!</li>
+<li>“Take the limit of <span class="math inline">\(f(x, y)\)</span> along the left side of <span class="math inline">\(y=g(x)\)</span>”</li>
+</ul></li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

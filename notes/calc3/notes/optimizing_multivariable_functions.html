@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-06-02">
 
-<title>Intro to Calc III – 616c616e</title>
+<title>optimizing_multivariable_functions – 616c616e</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../assets/css/styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../assets/css/styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -81,9 +109,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">616c616e</span>
     </a>
   </div>
@@ -94,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
+    <a class="nav-link" href="../../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -103,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cool-stuff">    
         <li>
-    <a class="dropdown-item" href="../../stuffs/sunsets/index.html">
+    <a class="dropdown-item" href="../../../stuffs/sunsets/index.html">
  <span class="dropdown-text">Sunsets</span></a>
   </li>  
     </ul>
@@ -114,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li>
-    <a class="dropdown-item" href="../../notes/calc3/index.html">
+    <a class="dropdown-item" href="../../../notes/calc3/index.html">
  <span class="dropdown-text">Calc III</span></a>
   </li>  
     </ul>
@@ -130,108 +158,78 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#my-messy-notes" id="toc-my-messy-notes" class="nav-link active" data-scroll-target="#my-messy-notes">My Messy Notes</a></li>
-  <li><a href="#overview-of-contents" id="toc-overview-of-contents" class="nav-link" data-scroll-target="#overview-of-contents">Overview of Contents</a></li>
-  <li><a href="#vectors-and-3d-space" id="toc-vectors-and-3d-space" class="nav-link" data-scroll-target="#vectors-and-3d-space">Vectors and 3d Space</a></li>
-  <li><a href="#differentiation" id="toc-differentiation" class="nav-link" data-scroll-target="#differentiation">Differentiation</a></li>
-  <li><a href="#integration" id="toc-integration" class="nav-link" data-scroll-target="#integration">Integration</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Intro to Calc III</h1>
-</div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta column-page-left">
 
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">June 2, 2025</p>
-    </div>
-  </div>
-  
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 4, 2025</p>
-    </div>
-  </div>
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="my-messy-notes" class="level2">
-<h2 class="anchored" data-anchor-id="my-messy-notes">My Messy Notes</h2>
+<p><span class="math inline">\(f_x = f_y = 0\)</span> critical point! <span class="math inline">\(f_x\)</span> or <span class="math inline">\(f_y\)</span> does not exist -&gt; critical point!</p>
+<p>How do we find the local minima/maxima on a surface <span class="math inline">\(f(x, y)\)</span>?</p>
 <ul>
-<li><a href="../../notes/calc3/notes/vector_basics.html">vector basics!</a></li>
-<li><a href="../../notes/calc3/notes/curvature_and_normal_vectors.html">curvature and normal vectors</a></li>
-<li><a href="../../notes/calc3/notes/graphs_and_level_curves.html">graphs and level curves</a></li>
-<li><a href="../../notes/calc3/notes/limits_and_continuity.html">limits and continuity</a></li>
-<li><a href="../../notes/calc3/notes/partial_derivatives.html">partial derivatives</a></li>
-<li><a href="../../notes/calc3/notes/the_chain_rule.html">chain rule</a></li>
-<li><a href="../../notes/calc3/notes/directional_derivatives_and_gradient.html">directional derivatives and gradient</a></li>
-<li><a href="../../notes/calc3/notes/tangent_planes_and_linear_approximation.html">tangent planes and linear approximation</a></li>
-<li><a href="../../notes/calc3/notes/optimizing_multivariable_functions.html">optimizing multivariable functions</a></li>
-<li><a href="../../notes/calc3/notes/lagrange_multipliers.html">lagrange multipliers</a></li>
+<li>Review: <strong>properties of local maxima/minima</strong>
+<ul>
+<li>Bigger/smaller than surrounding values</li>
+<li>Note that tangent plane is 0, and it is in fact where it changes sign
+<ul>
+<li>Maxima: positive slope before, negative after</li>
+<li>Minima: negative slope before, positive after</li>
+</ul></li>
+<li>What about absolute maxima?
+<ul>
+<li>They must either be also local maxima, or else must be end behavior of the function.</li>
+</ul></li>
+<li>Tangent plane flat, what does that mean?
+<ul>
+<li>clearly partials in <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> must both be zero</li>
+<li><strong>gradient</strong> <span class="math inline">\(\nabla\)</span> must be 0</li>
+<li><span class="math inline">\(\dfrac{dy}{dx}=-\dfrac{f_x}{f_y}\)</span></li>
+<li>which is just <span class="math inline">\(-\dfrac{(\nabla f)_x}{(\nabla f)_y}\)</span> (keep in mind the subscript here is components of a vector, not partial derivatives) -&gt; neat to keep in mind</li>
+</ul></li>
+</ul></li>
+<li>So, an initial naive technique for finding such local maxima/minima could be as follows:
+<ul>
+<li>Find some <span class="math inline">\(x\)</span> s.t. <span class="math inline">\(f_x=0\)</span> and <span class="math inline">\(x\)</span> is a local maxima/minima along <span class="math inline">\(x\)</span> axis; using <span class="math inline">\(f_x\)</span>, find constraints on possible values of <span class="math inline">\(y\)</span></li>
+<li>At an above value <span class="math inline">\(y\)</span>, test to make sure it’s also a maxima/minima along <span class="math inline">\(y\)</span> axis, and reconcile the constraint on <span class="math inline">\(x\)</span></li>
+<li>What about a saddle point? Consider the middle of a hyperbolic paraboloid:
+<ul>
+<li>Loc. minimum along one axis, loc. max along the other!!!</li>
+<li>How do we deal with this???</li>
+</ul></li>
+</ul></li>
+<li>Improving this:
+<ul>
+<li>Set <span class="math inline">\(f_x=f_y=0\)</span>, solve for <span class="math inline">\((x, y, f)\)</span> -&gt; critical points</li>
+<li>It turns out that concavity tests in one variable (using the second derivative, i.e.&nbsp;<span class="math inline">\(f''(x)\)</span>) also scale to multiple variables!
+<ul>
+<li>For any given critical point <span class="math inline">\((x_c, y_c)\)</span>, <span class="math inline">\(f_{xx}\)</span> and <span class="math inline">\(f_{yy}\)</span> must be nonzero (otherwise these are inflections along <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> axes!) and have the same sign.</li>
+</ul></li>
+</ul></li>
+<li>So, for a <strong>determinant</strong> <span class="math inline">\(D \coloneqq f_{xx}f_{yy}-f_{xy}f_{yx}\)</span> at a given point <span class="math inline">\((x, y, f)\)</span>, we can try a <strong>determinant test</strong> for <em>well-behaving, twice-differentiable</em> functions:
+<ul>
+<li>But remember Clairaut’s theorem for well-behaving functions: <span class="math inline">\(f_{xy}=f_{yx}\)</span>!</li>
+<li>Thus we have <span class="math inline">\(D=f_{xx}f_{yy}-f_{xy}^2\)</span></li>
+<li>The determinant test states the following:
+<ul>
+<li>If <span class="math inline">\(D &gt; 0\)</span>:
+<ul>
+<li><span class="math inline">\(f_{xx} &gt; 0 \implies \text{local }\textbf{minimum}\)</span></li>
+<li><span class="math inline">\(f_{xx} &lt; 0 \implies \text{local }\textbf{maximum}\)</span></li>
+</ul></li>
+<li>If <span class="math inline">\(D &lt; 0\)</span>: we have a saddle point.</li>
+<li>If <span class="math inline">\(D=0\)</span>, the test is <strong>inconclusive.</strong></li>
+</ul></li>
+</ul></li>
+<li>For absolute minima/maxima: it works the same as in 2D too!
+<ul>
+<li>Once we find critical points as above, we can survey the area immediately around the other (e.g.&nbsp;<span class="math inline">\(y \coloneqq y_c\)</span>, <span class="math inline">\(x\in \left[x-c, x+c\right]\)</span> for some specified <span class="math inline">\(c\)</span>) to check appropriate concavity</li>
+</ul></li>
 </ul>
-</section>
-<section id="overview-of-contents" class="level2">
-<h2 class="anchored" data-anchor-id="overview-of-contents">Overview of Contents</h2>
-<ol type="1">
-<li>Vectors and 3d Space<br>
-1.1 Vectors and Vector Fields<br>
-1.2 Lines and Planes<br>
-1.3 Parametric Functions and Curves<br>
-1.4 Surfaces<br>
-1.5 Coordinate Systems<br>
-</li>
-<li>Differentiation<br>
-2.1 Partial Derivatives<br>
-2.2 Chain Rule<br>
-2.3 Gradient and Directional Derivatives<br>
-2.4 Curl and Divergence<br>
-2.5 Optimization<br>
-</li>
-<li>Integration<br>
-3.1 Multiple Integrals<br>
-3.2 Jacobian<br>
-3.3 Line Integrals<br>
-3.4 Surface and Flux Integrals<br>
-3.5 Stoke’s and Divergence Theorem<br>
-3.6 Green’s Theorem</li>
-</ol>
-</section>
-<section id="vectors-and-3d-space" class="level2">
-<h2 class="anchored" data-anchor-id="vectors-and-3d-space">Vectors and 3d Space</h2>
-<p>…</p>
-</section>
-<section id="differentiation" class="level2">
-<h2 class="anchored" data-anchor-id="differentiation">Differentiation</h2>
-<p>…</p>
-</section>
-<section id="integration" class="level2">
-<h2 class="anchored" data-anchor-id="integration">Integration</h2>
-<p>…</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
