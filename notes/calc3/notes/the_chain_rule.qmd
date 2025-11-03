@@ -1,11 +1,10 @@
 ---
-aliases:
-  - "15.4"
-  - chain rule
-tags:
-  - multivar
-  - math
+title: "15.4 The Chain Rule"
+date: 2025-11-04
+tags: [calc3, notes]
+description: "Notes taken from West Valley College's Math 004A class, credits to my professor Steve Blasberg"
 ---
+
 *Pretty similar to normal chain rule*
 
 ## Partial Chain Rule

@@ -1,18 +1,21 @@
 ---
 title: "Intro to Calc III"
 date: 2025-06-02
-date-modified: 2025-10-26
+date-modified: 2025-11-04
 ---
 
-*Once I find time, I'll simply upload the notes I took for my Calc III class, and refine them to be more readable for the public*
+## My Messy Notes
 
-$\xrightarrow{}$ Currently in the process of uploading! Pardon the formatting, they're copy pasted from my obsidian vault.
-
-## Uploads!
-
-- [vector basics!](vector_basics.qmd)
-- [curvature and normal vectors](145_curvature_and_normal_vectors.qmd)
-- [lagrange multipliers...](158_lagrange_multipliers.qmd)
+- [vector basics!](notes/vector_basics.qmd)
+- [curvature and normal vectors](notes/curvature_and_normal_vectors.qmd)
+- [graphs and level curves](notes/graphs_and_level_curves.qmd)
+- [limits and continuity](notes/limits_and_continuity.qmd)
+- [partial derivatives](notes/partial_derivatives.qmd)
+- [chain rule](notes/the_chain_rule.qmd)
+- [directional derivatives and gradient](notes/directional_derivatives_and_gradient.qmd)
+- [tangent planes and linear approximation](notes/tangent_planes_and_linear_approximation.qmd)
+- [optimizing multivariable functions](notes/optimizing_multivariable_functions.qmd)
+- [lagrange multipliers](notes/lagrange_multipliers.qmd)
 
 ## Overview of Contents
 1. Vectors and 3d Space \
@@ -35,16 +38,14 @@ $\xrightarrow{}$ Currently in the process of uploading! Pardon the formatting, t
 	3.5 Stoke's and Divergence Theorem \
 	3.6 Green's Theorem
 
-Maybe just a short intro that isn't topic specific, or maybe intro that is split between the three general points
-
 ## Vectors and 3d Space
 
-Blah Blah Blah
+...
 
 ## Differentiation
 
-EEEEEE EEEE
+...
 
 ## Integration
 
-EEEEEEEEEEEfsd
+...

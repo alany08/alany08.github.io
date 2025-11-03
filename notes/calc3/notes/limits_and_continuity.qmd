@@ -1,18 +1,17 @@
 ---
-aliases:
-  - limits
-  - continuity
-  - "15.2"
-tags:
-  - math
-  - multivar
+title: "15.2 Limits and Continuity"
+date: 2025-11-04
+tags: [calc3, notes]
+description: "Notes taken from West Valley College's Math 004A class, credits to my professor Steve Blasberg"
 ---
+
 #### Limits
 - Instead of *intervals* on each var getting smaller ($\epsilon$, $\delta$ proof), use *circles*.
 	- for $z=c \pm \delta$, lim $(x, y)$ to $(a, b)$, $(x-a)^2+(y-b)^2 \leq \epsilon$, letting $\delta := \sqrt{\epsilon}$
 - Approaching is no longer along just $+$ or $-$ -- we can approach from not just any *direction*, but any curve!
 	- Appraching along $y=g(x)$ then means adapting $f(x, y)$ to $f(x, g(x))$ and then taking a limit. Vice versa.
-###### Weird shit
+
+###### Weird stuff
 - Say $\lim_\limits{(x,y)\to(0,0)} \dfrac{x^2y}{x^4+y^2}$ -- if we approach along $x=0$: limit $0$. Same for any $y=mx$.
 	- Intuitively, is the limit then $0$? -- **No!**
 		- Say we approach along $y=x^2$ --> lim = $\dfrac{1}{2}$!

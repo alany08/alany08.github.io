@@ -1,12 +1,10 @@
 ---
-aliases:
-  - partials
-  - partial derivatives
-  - "15.3"
-tags:
-  - multivar
-  - math
+title: "15.3 Partial Derivatives"
+date: 2025-11-04
+tags: [calc3, notes]
+description: "Notes taken from West Valley College's Math 004A class, credits to my professor Steve Blasberg"
 ---
+
 #### The Derivative
 - Slope of the tangent line, do you remember our "typical" definition?
   $$
