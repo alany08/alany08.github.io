@@ -2,7 +2,7 @@
 title: Detecting AI Generated Images
 date: 2025-08-04
 description: "[WIP] What fingerprints AI image generation leaves on the image, and how to use them to identify truth and return integrity to information on the internet."
-categories: [Tech]
+categories: [tech]
 draft: true
 ---
 
