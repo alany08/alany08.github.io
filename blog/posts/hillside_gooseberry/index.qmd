@@ -20,9 +20,9 @@ Some more information to note that may be useful as reference for anybody who wa
 - They are quite prickly, so careful when trying to collect berries
 - Usually found in partially shady areas, as undergrowth
 
-[CNPS](https://www.cnps.org/gardening/california-native-plant-propagation-4014) (California Native Plant Society, cool organization!) has a page about native plant propagation, it also happens to include this plant! However, it does seem that most berries like these include chemical inhibitors within the pulp to prevent germination, and ensure they only germinate after being ingested by an animal. They name a method of fermenting the mashed pulp before germination for another *Ribes* species, so I will be attempting that for these berries I have.
+[CNPS](https://www.cnps.org/gardening/california-native-plant-propagation-4014) (California Native Plant Society, cool organization!) has a page about native plant propagation, it also happens to include this plant! I do hear that most berries like these include chemical inhibitors within the pulp to prevent germination, so to ensure they only germinate after being ingested by an animal. They name a method of fermenting the mashed pulp before germination for another *Ribes* species, so I will be attempting that for these berries I have. Apparently the mashing/fermenting simulates passage through the digestive system, to remove the inhibiting chemicals.
 
-However, I'm not certain about the need for cold stratification, so I will try half in the refrigerator for a week, and another half directly in pots outdoors with consistent moisture (it's currently May, and I'm in around USDA zone 9b. I think this is enough to start trying to propagate this plant, lets get to preparing!
+I'm not certain about the need for cold stratification though, so I will try half in the refrigerator for a week, and another half directly in pots outdoors with consistent moisture (it's currently May, and I'm in around USDA zone 9b. I think this is enough to start trying to propagate this plant, lets get to preparing!
 
 For my germination procedure:
 
@@ -33,9 +33,11 @@ For my germination procedure:
 - Water and hope they grow
 
 
-Germination
+First update: mashing the berries, 2026-05-10
 ---
 
 I've mashed the berries, this is what they look like, I'm going to leave them for around a week, but I'll be back with updates in case less than a week is necessary. The seeds are very dark, and they're actually visible in the first picture through the red skin. The pulp looks like grape, and tastes sort of like grape pulp, and it's not sour (I ate one of them beforehand). The seeds are chewy and don't really taste like anything. It's just mildly sweet.
 
 ![Anyways, I don't have a lot of berries, so here they are, mashed.](mashed_berries.jpg)
+
+I'll continue documenting my progress with germinating these berries, and hopefully with success.
