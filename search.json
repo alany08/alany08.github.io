@@ -11,14 +11,14 @@
     "href": "notes/calc3/notes/vector_basics.html",
     "title": "Vector Basics",
     "section": "",
-    "text": "NOTE: First class! ^_^\nFunction \\(f(x)\\) -&gt; inputs to outputs, points (ordered pairs) on a coordinate plane\n\nThese points can be expressed using vectors\n\nFunction \\(f(x, y)\\) -&gt; ordered triples on a coordinate space\n\nGenerally to graph, we need to draw 3D projections onto 2D\nRH rule coord system setup:\n\nX/Y are on the horizontal plane (coming out of the page)\nX axis as the one coming out of the page to you (as opposed to Y which you might think)\n3D space: asymmetry if we swap axes (can’t rotate through 4D)! We need some reference that is asymmetric in all three dimensions.\nIndex finger +x, Middle finger +y, then thumb points +z.\n\n\nGeneral vector rules:\n\n\\(\\mathbf{v} \\cdot \\mathbf{s}\\) =&gt; multiply components, sum together products\n\\(\\mathbf{v} + \\mathbf{w}\\) =&gt; add components\nVector has no “position”, only a displacement, with direction!\nFamous parallelogram rule for sum of vectors in standard position\nSubtraction: A - B = vector from B, to A\n||v|| = sqrt(sum(vi**2))\n3+D spaces, you can only find angle between vectors! (you can’t get angle info from single components)\nu = ||u|| * &lt;cos(alpha), cos(beta), cos(gamma)&gt; (THIS IS ACTUALLY THE UNIT VECTOR !!!!)"
+    "text": "NOTE: First class! _\nFunction \\(f(x)\\) -&gt; inputs to outputs, points (ordered pairs) on a coordinate plane\n\nThese points can be expressed using vectors\n\nFunction \\(f(x, y)\\) -&gt; ordered triples on a coordinate space\n\nGenerally to graph, we need to draw 3D projections onto 2D\nRH rule coord system setup:\n\nX/Y are on the horizontal plane (coming out of the page)\nX axis as the one coming out of the page to you (as opposed to Y which you might think)\n3D space: asymmetry if we swap axes (can’t rotate through 4D)! We need some reference that is asymmetric in all three dimensions.\nIndex finger +x, Middle finger +y, then thumb points +z.\n\n\nGeneral vector rules:\n\n\\(\\mathbf{v} \\cdot \\mathbf{s}\\) =&gt; multiply components, sum together products\n\\(\\mathbf{v} + \\mathbf{w}\\) =&gt; add components\nVector has no “position”, only a displacement, with direction!\nFamous parallelogram rule for sum of vectors in standard position\nSubtraction: A - B = vector from B, to A\n||v|| = sqrt(sum(vi**2))\n3+D spaces, you can only find angle between vectors! (you can’t get angle info from single components)\nu = ||u|| * &lt;cos(alpha), cos(beta), cos(gamma)&gt; (THIS IS ACTUALLY THE UNIT VECTOR !!!!)"
   },
   {
     "objectID": "notes/calc3/notes/vector_basics.html#section",
     "href": "notes/calc3/notes/vector_basics.html#section",
     "title": "Vector Basics",
     "section": "",
-    "text": "NOTE: First class! ^_^\nFunction \\(f(x)\\) -&gt; inputs to outputs, points (ordered pairs) on a coordinate plane\n\nThese points can be expressed using vectors\n\nFunction \\(f(x, y)\\) -&gt; ordered triples on a coordinate space\n\nGenerally to graph, we need to draw 3D projections onto 2D\nRH rule coord system setup:\n\nX/Y are on the horizontal plane (coming out of the page)\nX axis as the one coming out of the page to you (as opposed to Y which you might think)\n3D space: asymmetry if we swap axes (can’t rotate through 4D)! We need some reference that is asymmetric in all three dimensions.\nIndex finger +x, Middle finger +y, then thumb points +z.\n\n\nGeneral vector rules:\n\n\\(\\mathbf{v} \\cdot \\mathbf{s}\\) =&gt; multiply components, sum together products\n\\(\\mathbf{v} + \\mathbf{w}\\) =&gt; add components\nVector has no “position”, only a displacement, with direction!\nFamous parallelogram rule for sum of vectors in standard position\nSubtraction: A - B = vector from B, to A\n||v|| = sqrt(sum(vi**2))\n3+D spaces, you can only find angle between vectors! (you can’t get angle info from single components)\nu = ||u|| * &lt;cos(alpha), cos(beta), cos(gamma)&gt; (THIS IS ACTUALLY THE UNIT VECTOR !!!!)"
+    "text": "NOTE: First class! _\nFunction \\(f(x)\\) -&gt; inputs to outputs, points (ordered pairs) on a coordinate plane\n\nThese points can be expressed using vectors\n\nFunction \\(f(x, y)\\) -&gt; ordered triples on a coordinate space\n\nGenerally to graph, we need to draw 3D projections onto 2D\nRH rule coord system setup:\n\nX/Y are on the horizontal plane (coming out of the page)\nX axis as the one coming out of the page to you (as opposed to Y which you might think)\n3D space: asymmetry if we swap axes (can’t rotate through 4D)! We need some reference that is asymmetric in all three dimensions.\nIndex finger +x, Middle finger +y, then thumb points +z.\n\n\nGeneral vector rules:\n\n\\(\\mathbf{v} \\cdot \\mathbf{s}\\) =&gt; multiply components, sum together products\n\\(\\mathbf{v} + \\mathbf{w}\\) =&gt; add components\nVector has no “position”, only a displacement, with direction!\nFamous parallelogram rule for sum of vectors in standard position\nSubtraction: A - B = vector from B, to A\n||v|| = sqrt(sum(vi**2))\n3+D spaces, you can only find angle between vectors! (you can’t get angle info from single components)\nu = ||u|| * &lt;cos(alpha), cos(beta), cos(gamma)&gt; (THIS IS ACTUALLY THE UNIT VECTOR !!!!)"
   },
   {
     "objectID": "notes/calc3/notes/tangent_planes_and_linear_approximation.html",
@@ -91,6 +91,41 @@
     "text": "Integration\n…"
   },
   {
+    "objectID": "blog/posts/hillside_gooseberry/index.html",
+    "href": "blog/posts/hillside_gooseberry/index.html",
+    "title": "Hillside Gooseberry",
+    "section": "",
+    "text": "Some berries I found today, I want to try to germinate them but it doesn’t seem like there’s a lot of information online about them. There does seem to be some strange wool or fur on the berries…"
+  },
+  {
+    "objectID": "blog/posts/hillside_gooseberry/index.html#some-basic-info",
+    "href": "blog/posts/hillside_gooseberry/index.html#some-basic-info",
+    "title": "Hillside Gooseberry",
+    "section": "Some basic info…",
+    "text": "Some basic info…\nThis plant does appear in the calscape database, and it’s native to California so it’s most likely beneficial to plant this for the environment. The bush was originally found near a creek in a partially shady area, but the Wikipedia page does list this plant as belonging to chaparral communities. Also as I’m writing this, it seems like the Wikipedia page has a dead link to USDA’s database. Fixing that…\nThe bush also contains a decent amount of thorns and I was pricked quite a bit by them, and it’s pretty evident from the berries as well. Also, most berries need cold stratification, however I’m not completely sure about this.\nSome more information to note that may be useful as reference for anybody who wants to find this plant though:\n\nThe berries ripen around May in my coastal CA region\nThey are quite prickly, so careful when trying to collect berries\nUsually found in partially shady areas, as undergrowth\n\nCNPS (California Native Plant Society, cool organization!) has a page about native plant propagation, it also happens to include this plant! However, it does seem that most berries like these include chemical inhibitors within the pulp to prevent germination, and ensure they only germinate after being ingested by an animal. They name a method of fermenting the mashed pulp before germination for another Ribes species, so I will be attempting that for these berries I have.\nHowever, I’m not certain about the need for cold stratification, so I will try half in the refrigerator for a week, and another half directly in pots outdoors with consistent moisture (it’s currently May, and I’m in around USDA zone 9b. I think this is enough to start trying to propagate this plant, lets get to preparing!\nFor my germination procedure:\n\nMash and ferment the berries for around a week\nClean berries of pulp\nPlace half of the beries on wet paper towel in the fridge for a week, then also plant in that compost mix\nPlace other half in a compost-sand mix outdoors\nWater and hope they grow"
+  },
+  {
+    "objectID": "blog/posts/hillside_gooseberry/index.html#germination",
+    "href": "blog/posts/hillside_gooseberry/index.html#germination",
+    "title": "Hillside Gooseberry",
+    "section": "Germination",
+    "text": "Germination\nI’ve mashed the berries, this is what they look like, I’m going to leave them for around a week, but I’ll be back with updates in case less than a week is necessary. The seeds are very dark, and they’re actually visible in the first picture through the red skin. The pulp looks like grape, and tastes sort of like grape pulp, and it’s not sour (I ate one of them beforehand). The seeds are chewy and don’t really taste like anything. It’s just mildly sweet.\n\n\n\nAnyways, I don’t have a lot of berries, so here they are, mashed."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nHillside Gooseberry\n\n\n\nplants\n\n\n\nRibes californicum: I found this cool berry while walking in a park and thought it’d be nice to try to plant some for myself. Will update this page as I try to germinate…\n\n\n\n5/10/26\n\n\n\n\n\n\n\n\n\n\n\nFirst Post!\n\n\n\nmisc\n\n\n\nMy first non-draft post! How I want to further develop this blog, and things that I want to do (but may or may not be abandoned as life changes)\n\n\n\n10/26/25\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "License",
+    "section": "",
+    "text": "MIT License\nCopyright (c) 2024 Alan\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  {
     "objectID": "blog/posts/first_post/index.html",
     "href": "blog/posts/first_post/index.html",
     "title": "First Post!",
@@ -110,20 +145,6 @@
     "title": "First Post!",
     "section": "So.. What now…?",
     "text": "So.. What now…?\nI’ve recently gotten a few ideas that I might add to this blog site, and we’ll see as we go. I don’t know if I’ll muster up enough motivation to add them, but they might work!\n\nUpload my Calc III notes to the existing one\nDocument my science olympiad progress!\nRegularly post how the plants in my garden are doing\nAdd small interactive experiences that revolve around one concept (maybe in the notes section?)\nSummarize what’s happened in my life on a weekly basis\nRegurgitate the stuff I learn in here (they say, trying to teach something is the best way to learn it…)"
-  },
-  {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "License",
-    "section": "",
-    "text": "MIT License\nCopyright (c) 2024 Alan\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blogs",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nFirst Post!\n\n\n\nMisc\n\n\n\nMy first non-draft post! How I want to further develop this blog, and things that I want to do (but may or may not be abandoned as life changes)\n\n\n\n10/26/25\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",

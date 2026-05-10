@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-11-04">
-<meta name="description" content="Notes taken from West Valley College’s Math 004A class, credits to my professor Steve Blasberg">
+<meta name="dcterms.date" content="2026-05-10">
+<meta name="description" content="Ribes californicum: I found this cool berry while walking in a park and thought it’d be nice to try to plant some for myself. Will update this page as I try to germinate these seeds.">
 
-<title>15.4 The Chain Rule – 616c616e</title>
+<title>Hillside Gooseberry – 616c616e</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-244ce1b9ec229af56bb6f90d24b3371d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,35 +76,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../assets/css/styles.css">
 </head>
@@ -165,9 +139,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#partial-chain-rule" id="toc-partial-chain-rule" class="nav-link active" data-scroll-target="#partial-chain-rule">Partial Chain Rule</a></li>
-  <li><a href="#find-fracdydx-when-theres-z" id="toc-find-fracdydx-when-theres-z" class="nav-link" data-scroll-target="#find-fracdydx-when-theres-z">Find <span class="math inline">\(\frac{dy}{dx}\)</span> when there’s <span class="math inline">\(z\)</span></a></li>
-  <li><a href="#partial-2nd-derivative-chain-rule" id="toc-partial-2nd-derivative-chain-rule" class="nav-link" data-scroll-target="#partial-2nd-derivative-chain-rule">Partial 2nd derivative Chain Rule</a></li>
+  <li><a href="#some-basic-info" id="toc-some-basic-info" class="nav-link active" data-scroll-target="#some-basic-info">Some basic info…</a></li>
+  <li><a href="#germination" id="toc-germination" class="nav-link" data-scroll-target="#germination">Germination</a></li>
   </ul>
 </nav>
     </div>
@@ -176,12 +149,15 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">15.4 The Chain Rule</h1>
-</div>
+<h1 class="title">Hillside Gooseberry</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">plants</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    Notes taken from West Valley College’s Math 004A class, credits to my professor Steve Blasberg
+    <em>Ribes californicum</em>: I found this cool berry while walking in a park and thought it’d be nice to try to plant some for myself. Will update this page as I try to germinate these seeds.
   </div>
 </div>
 
@@ -192,7 +168,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 4, 2025</p>
+      <p class="date">May 10, 2026</p>
     </div>
   </div>
   
@@ -204,19 +180,42 @@ window.Quarto = {
 </header>
 
 
-<p><em>Pretty similar to normal chain rule</em></p>
-<section id="partial-chain-rule" class="level2">
-<h2 class="anchored" data-anchor-id="partial-chain-rule">Partial Chain Rule</h2>
-<p>Let <span class="math inline">\(f(x, y) = z\)</span> be a function in terms of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> Let <span class="math inline">\(x\)</span> be a function of <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> Let <span class="math inline">\(y\)</span> be a function of <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span></p>
-<p>Then, <span class="math inline">\(\frac{\partial z}{\partial s}\)</span> would be <span class="math inline">\(\frac{\partial f}{\partial x}\frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial s}\)</span> <span class="math inline">\(\frac{\partial z}{\partial t}\)</span> would be the same thing, but instead of the partials of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in relation to <span class="math inline">\(s\)</span>, it would be in relation to <span class="math inline">\(t\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="hillside_gooseberry.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Some berries I found today, I want to try to germinate them but it doesn’t seem like there’s a lot of information online about them. There does seem to be some strange wool or fur on the berries…"><img src="hillside_gooseberry.jpg" class="img-fluid figure-img" alt="Some berries I found today, I want to try to germinate them but it doesn’t seem like there’s a lot of information online about them. There does seem to be some strange wool or fur on the berries…"></a></p>
+<figcaption>Some berries I found today, I want to try to germinate them but it doesn’t seem like there’s a lot of information online about them. There does seem to be some strange wool or fur on the berries…</figcaption>
+</figure>
+</div>
+<section id="some-basic-info" class="level2">
+<h2 class="anchored" data-anchor-id="some-basic-info">Some basic info…</h2>
+<p>This plant does appear in the <a href="https://calscape.org/Ribes-californicum-(Hillside-Gooseberry)">calscape database</a>, and it’s native to California so it’s most likely beneficial to plant this for the environment. The bush was originally found near a creek in a partially shady area, but the <a href="https://en.wikipedia.org/wiki/Ribes_californicum">Wikipedia page</a> does list this plant as belonging to chaparral communities. Also as I’m writing this, it seems like the Wikipedia page has a dead link to USDA’s database. Fixing that…</p>
+<p>The bush also contains a decent amount of thorns and I was pricked quite a bit by them, and it’s pretty evident from the berries as well. Also, most berries need cold stratification, however I’m not completely sure about this.</p>
+<p>Some more information to note that may be useful as reference for anybody who wants to find this plant though:</p>
+<ul>
+<li>The berries ripen around May in my coastal CA region</li>
+<li>They are quite prickly, so careful when trying to collect berries</li>
+<li>Usually found in partially shady areas, as undergrowth</li>
+</ul>
+<p><a href="https://www.cnps.org/gardening/california-native-plant-propagation-4014">CNPS</a> (California Native Plant Society, cool organization!) has a page about native plant propagation, it also happens to include this plant! However, it does seem that most berries like these include chemical inhibitors within the pulp to prevent germination, and ensure they only germinate after being ingested by an animal. They name a method of fermenting the mashed pulp before germination for another <em>Ribes</em> species, so I will be attempting that for these berries I have.</p>
+<p>However, I’m not certain about the need for cold stratification, so I will try half in the refrigerator for a week, and another half directly in pots outdoors with consistent moisture (it’s currently May, and I’m in around USDA zone 9b. I think this is enough to start trying to propagate this plant, lets get to preparing!</p>
+<p>For my germination procedure:</p>
+<ul>
+<li>Mash and ferment the berries for around a week</li>
+<li>Clean berries of pulp</li>
+<li>Place half of the beries on wet paper towel in the fridge for a week, then also plant in that compost mix</li>
+<li>Place other half in a compost-sand mix outdoors</li>
+<li>Water and hope they grow</li>
+</ul>
 </section>
-<section id="find-fracdydx-when-theres-z" class="level2">
-<h2 class="anchored" data-anchor-id="find-fracdydx-when-theres-z">Find <span class="math inline">\(\frac{dy}{dx}\)</span> when there’s <span class="math inline">\(z\)</span></h2>
-<p>Let <span class="math inline">\(z\)</span> be a function of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> Using the partials of <span class="math inline">\(z\)</span> in terms vof <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>: <span class="math inline">\(\frac{dy}{dx}\)</span> would be <span class="math inline">\(-\frac{\frac{\partial z}{\partial x}}{\frac{\partial z}{\partial y}}\)</span>or, <span class="math inline">\(-\frac{f_x}{f_y}\)</span></p>
-</section>
-<section id="partial-2nd-derivative-chain-rule" class="level2">
-<h2 class="anchored" data-anchor-id="partial-2nd-derivative-chain-rule">Partial 2nd derivative Chain Rule</h2>
-<p>Let <span class="math inline">\(z\)</span> be a differentiable function of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> Let <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> be differentiable functions of <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> Then: <span class="math inline">\(\frac{\partial z}{\partial s}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial s} + \frac{\partial z}{\partial y}\frac{\partial y}{\partial s}\)</span> And: <span class="math inline">\(\frac{\partial z}{\partial t}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial z}{\partial y}\frac{\partial y}{\partial t}\)</span> The second derivatives are <span class="math inline">\(f_{ss}\)</span>, <span class="math inline">\(f_{st}\)</span>, and <span class="math inline">\(f_{tt}\)</span> From the previous formulas: <span class="math inline">\(f_s = f_x x_s + f_y y_s\)</span> <span class="math inline">\(f_t = f_x x_t + f_y y_t\)</span> <span class="math inline">\(f_{ss}\)</span> would be <span class="math inline">\((f_x x_s + f_y y_s)_s\)</span> <span class="math inline">\(= (f_x)_s x_s + f_x x_{ss} + (f_y)_s y_s + f_y y_{ss}\)</span> <span class="math inline">\(\boxed{= (f_{xx}x_s + f_{xy}y_s)x_s + f_x x_{ss} + (f_{yx}x_s + f_{yy} y_s)y_s + f_y y_{ss}}\)</span> You could simplify that, but the grouping makes sense. Simply find these and plug: <span class="math inline">\(f_x\)</span> <span class="math inline">\(f_{xy}\)</span> <span class="math inline">\(f_{xx}\)</span> <span class="math inline">\(f_y\)</span> <span class="math inline">\(f_{yx}\)</span> <span class="math inline">\(f_{yy}\)</span> <span class="math inline">\(x_s\)</span> <span class="math inline">\(x_{ss}\)</span> <span class="math inline">\(y_s\)</span> <span class="math inline">\(y_{ss}\)</span> Deriving for <span class="math inline">\(f_{st}\)</span> or <span class="math inline">\(f_{tt}\)</span> would be a similar process</p>
+<section id="germination" class="level2">
+<h2 class="anchored" data-anchor-id="germination">Germination</h2>
+<p>I’ve mashed the berries, this is what they look like, I’m going to leave them for around a week, but I’ll be back with updates in case less than a week is necessary. The seeds are very dark, and they’re actually visible in the first picture through the red skin. The pulp looks like grape, and tastes sort of like grape pulp, and it’s not sour (I ate one of them beforehand). The seeds are chewy and don’t really taste like anything. It’s just mildly sweet.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="mashed_berries.jpg" class="img-fluid figure-img"></p>
+<figcaption>Anyways, I don’t have a lot of berries, so here they are, mashed.</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -623,6 +622,38 @@ window.Quarto = {
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
