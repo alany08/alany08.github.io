@@ -18,6 +18,9 @@ jobs:
 
       - name: Copy .well-known to public
         run: cp -r .well-known public/
+        
+      - name: Copy google verification to public
+        run: cp -r google*.html public/
 
       - name: Copy _config.yml to public
         run: cp _config.yml public/
