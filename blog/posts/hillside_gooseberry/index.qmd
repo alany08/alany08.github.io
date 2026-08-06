@@ -1,6 +1,7 @@
 ---
 title: Hillside Gooseberry
 date: 2026-05-10
+date-modified: 2026-08-06
 description: "*Ribes californicum*: I found this cool berry while walking in a park and thought it'd be nice to try to plant some for myself. Will update this page as I try to germinate these seeds."
 categories: [plants]
 ---
@@ -41,3 +42,8 @@ I've mashed the berries, this is what they look like, I'm going to leave them fo
 ![Anyways, I don't have a lot of berries, so here they are, mashed.](mashed_berries.jpg)
 
 I'll continue documenting my progress with germinating these berries, and hopefully with success.
+
+Second update: oops, 2026-08-06
+---
+
+It's been a while and oops I forgot to update... But basically shortly after I discovered that the seeds have been lost unfortunately. Oh well...

@@ -1,0 +1,48 @@
+---
+title: Deep Learning Survev
+date: 2026-08-06
+description: "Surely a neural network can play a simple 2d io game"
+categories: [coding]
+draft: true
+---
+
+I got bored, so what if I tasked myself to make a neural network play a 2d battle royale shooter game? So for the basics, survev is just a clone of the original surviv.io, where you basically just play 5 ish minutes games against other players, wanting to be the last one alive. It seems simple enough, with the inputs just being mouse aim, wasd, and some other keys.
+
+Let's start with the game interface:
+---
+
+I decided to use selenium so I have built in screen capture methods, and also direct input control without the complexity of hooking into the game, and also without too much overhead. I initially used the built in `driver.get_screenshot_as_png()` method to take screenshots of the game for the neural network, but it was a bit slow, and I discovered that you could directly interface with the chrome dev tools to capture a screenshot faster, with `driver.execute_cdp_cmd("Page.captureScreenshot", {...args})`
+
+Anyways with all of that key_down and key_up coding overhead over with, I was deciding between different input representations. One side, I would have which keys are being held down for movement and interaction, then another I'd have the cursor position. These were really different data types, as keys being held down was just a boolean state while the cursor was a vector/array of x and y coordinates.
+
+I decided to separate it like the internal game data does, boolean 0s and 1s for keys being held down, but an additional value being whether or not to move the mouse. Then I'd have a separate input for moving the mouse when applicable, if the `move` enumeration of the keys was set to 1.
+
+Neural network "heads"?
+---
+
+I'm still pretty clueless about how this works, and I'm just going to play around with the different values, but a large part of this I did use an llm to make... There were two different outputs from the neural network that I was seeking to get: one array of binary states, and another vector of two values from 0-1 (ratio of the screen the cursor is at).
+
+I thought of each neural network as just a large matrix operation, the general gist I've always been told. With different layers in this neural network, I thought of the segmentation between the "backbone" of the neural network and each "head." If the backbone is shared between all the "heads," naturally each "head" would operate on the same backbone. If each layer was just a different abstraction of the data, then the backbone being the closest to the raw image data would be the main percieving element of the neural network. On this data, each head could independently decide on different output forms.
+
+I had one head dedicated to a boolean state output of 21 something keys, and then I had a vector of two numbers between 0-1. Each head takes in an input of the base backbone CNN, and makes predictions based off of that.
+
+Current configuration
+---
+
+I have it set on the torch Adam optimizer, with:
+
+lr = 3e-4
+n_steps = 2048
+n_epochs = 4
+batch_size = 64
+gamma = 0.99
+gae_lambda = 0.95
+clip_eps = 0.2
+value_coeff = 0.5
+entropy_coeff = 0.01
+max_grad_norm = 0.5
+step_time = 0.2
+
+while the reward function looks like +0.1 if the bot is alive, +10 for each kill, and 0.1 for each health point change (negative for losing health, positive for healing). When the bot dies, it is peanlized by up to -20, and for each kill it gets, it has a penalty reduction of 2 up to 15. If the bot wins, it gets a +100 reward.
+
+I'm just going to play around with these values for now, and once we get a good amount of steps and eps in, I'll consider tweaking it around and learning what everything means better while I go.
