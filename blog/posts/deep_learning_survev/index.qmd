@@ -50,7 +50,7 @@ I'm just going to play around with these values for now, and once we get a good 
 
 Graphs
 ---
-I've decided to put this project on pause and just post what I have so far, so here's a bit of data I've collected over the training process. Take a look at my source code repo [here](github.com/alany08/funny-survev-bot/) if you'd like! (If you know what's wrong, I'd appreciate some help too :D)
+I've decided to put this project on pause and just post what I have so far, so here's a bit of data I've collected over the training process. Take a look at my source code repo [here](https://github.com/alany08/funny-survev-bot/) if you'd like! (If you know what's wrong, I'd appreciate some help too :D)
 
 ```{ojs}
 //| code-fold: true
@@ -112,6 +112,7 @@ This is going very slowly, so I'm thinking of doing manual labeling for the CNN 
 Alright the prelabeled data isn't really working, and I'm considering starting from scratch since by two days, surely it should be able to get basic feature recognition by now...
 
 I've sort of got the hang of things, so let me try my hand at this later from scratch
-- Have more frequent rewards...
-- Maybe use something other than GAE for update()?
-- Pretrain the CNN using supervised training instead?
+
+ - Have more frequent rewards...
+ - Maybe use something other than GAE for update()?
+ - Pretrain the CNN using supervised training instead?
