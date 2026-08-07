@@ -2,6 +2,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/deep_learning_survev/index.html",
       "/blog/posts/hillside_gooseberry/index.html",
       "/blog/posts/first_post/index.html"
     ]
@@ -9,6 +10,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/blog/posts/deep_learning_survev/index.html",
       "/blog/posts/hillside_gooseberry/index.html",
       "/blog/posts/first_post/index.html"
     ]
