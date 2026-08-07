@@ -33,11 +33,13 @@ project:
     - "**/*.qmd"
     - "**/*.png"
     - "**/*.jpg"
+    - "**/*.csv"
     - "!public/"
   resources:
     - "*.png"
     - "*.jpg"
     - "*.css"
+    - "*.csv"
 
 output:
   html:
