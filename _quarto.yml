@@ -38,6 +38,7 @@ project:
     - "*.png"
     - "*.jpg"
     - "*.css"
+    - "*.csv"
 
 output:
   html:
