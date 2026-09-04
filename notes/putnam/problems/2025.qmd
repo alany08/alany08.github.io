@@ -4,6 +4,7 @@ description: "My reasoning through past Putnam problems"
 date: 2026-09-04
 ---
 
+[Original problem set from MAA](https://maa.org/wp-content/uploads/2026/02/2025-Putnam-Problems-for-Sessions-A-and-B.pdf)
 
 A1 - Prove that $gcd(2m_k + 1, 2n_k + 1) = 1$ for all positive integers $k$ but for a finite amount of $k$.
 ---
