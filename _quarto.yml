@@ -25,6 +25,8 @@ website:
         menu:
           - text: "Calc III"
             href: notes/calc3/index.qmd
+          - text: "Putnam"
+            href: notes/putnam/index.qmd
 
 project:
   type: website

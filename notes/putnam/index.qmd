@@ -1,0 +1,8 @@
+---
+title: "Putnam"
+date: 2026-09-04
+---
+
+I want to give the Putnam competition a shot this year, so heres my work on some past problems that I may or may not abandon depending on my motivation. I'm just trying to struggle with some problems to learn and train my reasoning through mathematical logic.
+
+[2025 Problems](problems/2025.qmd)
