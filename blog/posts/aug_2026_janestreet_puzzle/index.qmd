@@ -1,0 +1,86 @@
+---
+title: August 2026 Jane Street Puzzle
+date: 2026-08-25
+description: "Solving Jane Street's monthly puzzle, August 2026 (I'll find time later to upload the images)"
+categories: [math, puzzle]
+---
+
+[Original puzzle](https://www.janestreet.com/puzzles/andys-afternoon-amble-index/)
+
+First, how can Andy the ant notice he's in a different place than before? Let's mark the possible paths on the new hexagon tesselation (white hexagons only), where Andy expects to return home, but doesn't.
+
+(insert image)
+
+We notice that this pattern has radial symmetry thrice, so we can simplify it to just a home node connected to six hexagons in a loop. Because all the nodes outside this area Andy would discover he's no longer on his truncated tetrahedron, let's compute the probability that Andy remains inside this loop.
+
+(insert image of hexagon loop)
+
+All of the valid paths that remain inside this loop should start and end at Andy's home node at the bottom, so we can safely just eliminate the first and last node. Andy can also only have more than 3 nodes in total (so one node other than the homes), otherwise he'd be going nowhere. In addition, we also notice that couting every single node Andy visits, we cannot have odd numbers. Andy can always turn back on his path, in which he visits every node but the tip an even number of times (so 2n + 1, odd), or he goes full circle, in which he visits six nodes, but the one adjacent to his home node twice. Again, this is odd. Any combination of these nodes result in an odd number greater than or equal to one after excluding home.
+
+(insert image showing possible paths)
+
+I then attempted to simplify the problem, noticing that almost every node had 2 of 3 nodes being valid nodes, except for home and the one adjacent to home. I proceeded to try to compute an infinite sum as N approaches infinity, of the sorts:
+$$ 
+\sum_{n=0}^{\infty}{(\frac{2}{3})^{2n+1}}
+$$
+I was thinking that for each node that's not home, he'd have a 2/3 chance of staying, so for a path of length n, we'd have a (2/3)^n chance of staying on the valid nodes. However, I was wrong since we need to determine the weights for having a path of length n. How many ways can we have Andy walk 5 non-home nodes? or 7? I realized that this would be extremely difficult to define, and we still must distinguish between each node, as they each have a different distance from home. Through just an infinite sum I'd have no way to distinguish different ways of terminating a path.
+
+Thus, after doing some research on graph walks, I realized that Markov Chains are actually frequently used to represent these, with states being the nodes that Andy is currently on, and the output space of the Markov Matrix being the probabilities that given Andy is on this node (or on a probability distribution of some nodes), what's the probability of visiting the other nodes.
+
+(markov diagram with rows and cols labels)
+
+I also learnt about the concept of absorbing states. If Andy has returned home, we don't care about anything, because he stays home. So if Andy is in the "home" state in the markov chain, we pay no attention, and just assign 1 to "home" in the output, and zero to everything else. Otherwise, if Andy has left the space and realized that he's no longer on his tetrahedron, he can't simply un-realize and step back into the valid segment of the graph. Thus in our problem, there's two of these absorbing states: "home" and "outside."
+
+When we try to find the tendency of a markov decision process as the evolution tends to infinity (which we want, since the absorbing states automatically "terminate" the evolution and whenever andy hits an absorbing state he stays there), from some basic linear algebra, we know to find the eigenvecters. The dominant eigenvector would have an eigenvalue of 1, since if it was less than one (like the other eigenvectors), it would tend towards zero and evolve-out. If it was greater than one, a probability > 1 doesn't make sense.
+
+I was thinking, something must be off. How do we represent the initial state? We set home to be an absorbing state, and dropped starting from home, so how do we represent Andy leaving home? Evolving from any other state vector wouldn't make sense since we know Andy always starts from the home hexagon. Let's pause here and note for a second that the state vector is actually probabilities that sum up to one. Ok, let's move on now.
+
+Let's call our markov chain matrix $A$, and any initial vector $v$. we know that as we evolve this process $n$ times, we approach a resultant vector $A^n \cdot v$. And this always tends towards an eigenvector. Wait, eigenvector, right? Don't we already know it? Since the "home" state vector multiplied by the matrix $A$ is just the same vector, and also the "outside" state vector is just the same vector too... They also happen to be orthogonal as in their dot products equal zero.
+
+This means that for eigenvalue $\lambda=1$, we actually have two valid eigenvectors representing each absorbing state. Referencing [this math stackexchange post](https://math.stackexchange.com/questions/2336403/eigenvector-of-a-markov-chain-relation-to-initial-conditions), if we put everything in $A$'s eigenvector basis, including our starting condition (which is actually not the home node, but one step after so we don't get immediately trapped in the home condition), we notice that there are two eigenvectors that remain with an eigenvalue of one. The matrix is also diagonalizable (as we see later on, the eigenvector basis is complete), so we know we can write the initial state vector $v_0$ as a linear combination of the eigenvectors. note that the eigenvectors aren't necessarily all mutually orthogonal, so even though the dot product between $v_0$ and the vectors for "home" and "out" are zero, there is still some coefficient.
+
+Why linear combinations though? I'm stuck. Hm. Let's think about $lim_{n -> \infty}(A^n \cdot v_0)=v_f$. If we decompose $A^n \cdot v_0$ into $PD^n P^{-1} \cdot v_0$, we can simplify the exponentiation by diagonalizing the matrix. For some quick intuition of why we can diagonalize a matrix like this, "eigen" is German for "own", meaning that each matrix has it's own unique eigenvectors and eigenvalues. This means uisng the eigenvectors and eigenvalues somehow, you can uniquely specify a matrix. Or, you can think of it like rewriting it, stretching it along the eigenvalues as appropriate, then throwing it back to the old basis.
+
+As $n$ approaches infinity, we notice that all the eigenvalues less than one decay to zero (since we just exponentiate the diagonal values for diagonal matrices), and the ones equal to one stay. So for our case, $D^n$ becomes a diagonal matrix with ones for the eigenvectors representing "home" and "outside". $P^{-1}$ is a change of basis to rewrite $v_0$ in the eigenvector basis, then we select the coefficients for the eigenvectors of "home" and "outside", and $P$ puts it back into the standard basis. We can do $D^\infty$ really easily since it's just a diagonal matrix with some ones and some less than ones. We notice that the diagonal for $D^\infty$ results in zeros for everything other than the "home" and "outside" eigenvectors.  This is basically the same thing in the stackexchange post where a user says that all non-one eigenvalue eigenvectors disappear from the rewriting in the eigenvector basis.
+
+Onto solving this problem, here's just some busy work computing the eigenvalues and eigenvectors of $A$, and multiplying through $PD^{\infty}P^{-1} \cdot v_0$. We notice that all this complexity arises from having multiple dominant eigenvectors, and not just one. If we trace back our logic to solving the problem, we notice it originates from this problem having two "absorbing states", which introduces two eigenvectors with eigenvalues of both one. Otherwise, the steady state vector would just be the (presumedly otherwise) single eigenvector.
+
+(Ooops I made my matrix row-stochastic but used column-stochastic conventions...)
+
+```python
+import sympy
+
+third = sympy.Rational(1, 3)
+
+matrix = sympy.Matrix([
+    [1, 0, 0, 0, 0, 0, 0, 0],
+    [third, 0, third, 0, 0, 0, third, 0],
+    [0, third, 0, third, 0, 0, 0, third],
+    [0, 0, third, 0, third, 0, 0, third],
+    [0, 0, 0, third, 0, third, 0, third],
+    [0, 0, 0, 0, third, 0, third, third],
+    [0, third, 0, 0, 0, third, 0, third],
+    [0, 0, 0, 0, 0, 0, 0, 1]
+]).transpose()
+
+sympy.pprint(matrix)
+
+P, D = matrix.diagonalize()
+
+vinit = sympy.Matrix([
+[0],
+[1],
+[0],
+[0],
+[0],
+[0],
+[0],
+[0]
+])
+
+D_inf = D.applyfunc(lambda x: 1 if x == 1 else 0)
+
+sympy.pprint(P * D_inf * P.inv() * vinit)
+```
+
+If you think about it abstractly though... this is sort of comparing a $K_4$ graph to the new graph on the giant infinite tiled floor. Quite an interesting problem if you think about it. Other than that, I think I should've paid attention more in linear algebra, or put more rigor in myself...
