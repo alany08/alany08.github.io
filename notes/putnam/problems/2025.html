@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-25">
-<meta name="description" content="Solving Jane Street’s monthly puzzle, August 2026 (I’ll find time later to upload the images)">
+<meta name="dcterms.date" content="2026-09-04">
+<meta name="description" content="My reasoning through past Putnam problems">
 
-<title>August 2026 Jane Street Puzzle – 616c616e</title>
+<title>Past Problems: 2025 – 616c616e</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,41 +27,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -202,35 +167,37 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a1---prove-that-gcd2m_k-1-2n_k-1-1-for-all-positive-integers-k-but-for-a-finite-amount-of-k." id="toc-a1---prove-that-gcd2m_k-1-2n_k-1-1-for-all-positive-integers-k-but-for-a-finite-amount-of-k." class="nav-link active" data-scroll-target="#a1---prove-that-gcd2m_k-1-2n_k-1-1-for-all-positive-integers-k-but-for-a-finite-amount-of-k.">A1 - Prove that <span class="math inline">\(gcd(2m_k + 1, 2n_k + 1) = 1\)</span> for all positive integers <span class="math inline">\(k\)</span> but for a finite amount of <span class="math inline">\(k\)</span>.</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">August 2026 Jane Street Puzzle</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">math</div>
-    <div class="quarto-category">puzzle</div>
-  </div>
-  </div>
+<h1 class="title">Past Problems: 2025</h1>
+</div>
 
 <div>
   <div class="description">
-    Solving Jane Street’s monthly puzzle, August 2026 (I’ll find time later to upload the images)
+    My reasoning through past Putnam problems
   </div>
 </div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 25, 2026</p>
+      <p class="date">September 4, 2026</p>
     </div>
   </div>
   
@@ -242,63 +209,25 @@ window.Quarto = {
 </header>
 
 
-<p><a href="https://www.janestreet.com/puzzles/andys-afternoon-amble-index/">Original puzzle</a></p>
-<p>First, how can Andy the ant notice he’s in a different place than before? Let’s mark the possible paths on the new hexagon tesselation (white hexagons only), where Andy expects to return home, but doesn’t.</p>
-<p>(insert image)</p>
-<p>We notice that this pattern has radial symmetry thrice, so we can simplify it to just a home node connected to six hexagons in a loop. Because all the nodes outside this area Andy would discover he’s no longer on his truncated tetrahedron, let’s compute the probability that Andy remains inside this loop.</p>
-<p>(insert image of hexagon loop)</p>
-<p>All of the valid paths that remain inside this loop should start and end at Andy’s home node at the bottom, so we can safely just eliminate the first and last node. Andy can also only have more than 3 nodes in total (so one node other than the homes), otherwise he’d be going nowhere. In addition, we also notice that couting every single node Andy visits, we cannot have odd numbers. Andy can always turn back on his path, in which he visits every node but the tip an even number of times (so 2n + 1, odd), or he goes full circle, in which he visits six nodes, but the one adjacent to his home node twice. Again, this is odd. Any combination of these nodes result in an odd number greater than or equal to one after excluding home.</p>
-<p>(insert image showing possible paths)</p>
-<p>I then attempted to simplify the problem, noticing that almost every node had 2 of 3 nodes being valid nodes, except for home and the one adjacent to home. I proceeded to try to compute an infinite sum as N approaches infinity, of the sorts: <span class="math display">\[
-\sum_{n=0}^{\infty}{(\frac{2}{3})^{2n+1}}
-\]</span> I was thinking that for each node that’s not home, he’d have a 2/3 chance of staying, so for a path of length n, we’d have a (2/3)^n chance of staying on the valid nodes. However, I was wrong since we need to determine the weights for having a path of length n.&nbsp;How many ways can we have Andy walk 5 non-home nodes? or 7? I realized that this would be extremely difficult to define, and we still must distinguish between each node, as they each have a different distance from home. Through just an infinite sum I’d have no way to distinguish different ways of terminating a path.</p>
-<p>Thus, after doing some research on graph walks, I realized that Markov Chains are actually frequently used to represent these, with states being the nodes that Andy is currently on, and the output space of the Markov Matrix being the probabilities that given Andy is on this node (or on a probability distribution of some nodes), what’s the probability of visiting the other nodes.</p>
-<p>(markov diagram with rows and cols labels)</p>
-<p>I also learnt about the concept of absorbing states. If Andy has returned home, we don’t care about anything, because he stays home. So if Andy is in the “home” state in the markov chain, we pay no attention, and just assign 1 to “home” in the output, and zero to everything else. Otherwise, if Andy has left the space and realized that he’s no longer on his tetrahedron, he can’t simply un-realize and step back into the valid segment of the graph. Thus in our problem, there’s two of these absorbing states: “home” and “outside.”</p>
-<p>When we try to find the tendency of a markov decision process as the evolution tends to infinity (which we want, since the absorbing states automatically “terminate” the evolution and whenever andy hits an absorbing state he stays there), from some basic linear algebra, we know to find the eigenvecters. The dominant eigenvector would have an eigenvalue of 1, since if it was less than one (like the other eigenvectors), it would tend towards zero and evolve-out. If it was greater than one, a probability &gt; 1 doesn’t make sense.</p>
-<p>I was thinking, something must be off. How do we represent the initial state? We set home to be an absorbing state, and dropped starting from home, so how do we represent Andy leaving home? Evolving from any other state vector wouldn’t make sense since we know Andy always starts from the home hexagon. Let’s pause here and note for a second that the state vector is actually probabilities that sum up to one. Ok, let’s move on now.</p>
-<p>Let’s call our markov chain matrix <span class="math inline">\(A\)</span>, and any initial vector <span class="math inline">\(v\)</span>. we know that as we evolve this process <span class="math inline">\(n\)</span> times, we approach a resultant vector <span class="math inline">\(A^n \cdot v\)</span>. And this always tends towards an eigenvector. Wait, eigenvector, right? Don’t we already know it? Since the “home” state vector multiplied by the matrix <span class="math inline">\(A\)</span> is just the same vector, and also the “outside” state vector is just the same vector too… They also happen to be orthogonal as in their dot products equal zero.</p>
-<p>This means that for eigenvalue <span class="math inline">\(\lambda=1\)</span>, we actually have two valid eigenvectors representing each absorbing state. Referencing <a href="https://math.stackexchange.com/questions/2336403/eigenvector-of-a-markov-chain-relation-to-initial-conditions">this math stackexchange post</a>, if we put everything in <span class="math inline">\(A\)</span>’s eigenvector basis, including our starting condition (which is actually not the home node, but one step after so we don’t get immediately trapped in the home condition), we notice that there are two eigenvectors that remain with an eigenvalue of one. The matrix is also diagonalizable (as we see later on, the eigenvector basis is complete), so we know we can write the initial state vector <span class="math inline">\(v_0\)</span> as a linear combination of the eigenvectors. note that the eigenvectors aren’t necessarily all mutually orthogonal, so even though the dot product between <span class="math inline">\(v_0\)</span> and the vectors for “home” and “out” are zero, there is still some coefficient.</p>
-<p>Why linear combinations though? I’m stuck. Hm. Let’s think about <span class="math inline">\(lim_{n -&gt; \infty}(A^n \cdot v_0)=v_f\)</span>. If we decompose <span class="math inline">\(A^n \cdot v_0\)</span> into <span class="math inline">\(PD^n P^{-1} \cdot v_0\)</span>, we can simplify the exponentiation by diagonalizing the matrix. For some quick intuition of why we can diagonalize a matrix like this, “eigen” is German for “own”, meaning that each matrix has it’s own unique eigenvectors and eigenvalues. This means uisng the eigenvectors and eigenvalues somehow, you can uniquely specify a matrix. Or, you can think of it like rewriting it, stretching it along the eigenvalues as appropriate, then throwing it back to the old basis.</p>
-<p>As <span class="math inline">\(n\)</span> approaches infinity, we notice that all the eigenvalues less than one decay to zero (since we just exponentiate the diagonal values for diagonal matrices), and the ones equal to one stay. So for our case, <span class="math inline">\(D^n\)</span> becomes a diagonal matrix with ones for the eigenvectors representing “home” and “outside”. <span class="math inline">\(P^{-1}\)</span> is a change of basis to rewrite <span class="math inline">\(v_0\)</span> in the eigenvector basis, then we select the coefficients for the eigenvectors of “home” and “outside”, and <span class="math inline">\(P\)</span> puts it back into the standard basis. We can do <span class="math inline">\(D^\infty\)</span> really easily since it’s just a diagonal matrix with some ones and some less than ones. We notice that the diagonal for <span class="math inline">\(D^\infty\)</span> results in zeros for everything other than the “home” and “outside” eigenvectors. This is basically the same thing in the stackexchange post where a user says that all non-one eigenvalue eigenvectors disappear from the rewriting in the eigenvector basis.</p>
-<p>Onto solving this problem, here’s just some busy work computing the eigenvalues and eigenvectors of <span class="math inline">\(A\)</span>, and multiplying through <span class="math inline">\(PD^{\infty}P^{-1} \cdot v_0\)</span>. We notice that all this complexity arises from having multiple dominant eigenvectors, and not just one. If we trace back our logic to solving the problem, we notice it originates from this problem having two “absorbing states”, which introduces two eigenvectors with eigenvalues of both one. Otherwise, the steady state vector would just be the (presumedly otherwise) single eigenvector.</p>
-<p>(Ooops I made my matrix row-stochastic but used column-stochastic conventions…)</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>third <span class="op">=</span> sympy.Rational(<span class="dv">1</span>, <span class="dv">3</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> sympy.Matrix([</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>],</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    [third, <span class="dv">0</span>, third, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, third, <span class="dv">0</span>],</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, third, <span class="dv">0</span>, third, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, third],</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">0</span>, third, <span class="dv">0</span>, third, <span class="dv">0</span>, <span class="dv">0</span>, third],</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, third, <span class="dv">0</span>, third, <span class="dv">0</span>, third],</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, third, <span class="dv">0</span>, third, third],</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, third, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, third, <span class="dv">0</span>, third],</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>]</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>]).transpose()</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>sympy.pprint(matrix)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>P, D <span class="op">=</span> matrix.diagonalize()</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>vinit <span class="op">=</span> sympy.Matrix([</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>],</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>],</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>],</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>],</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>],</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>],</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>],</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>]</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>D_inf <span class="op">=</span> D.applyfunc(<span class="kw">lambda</span> x: <span class="dv">1</span> <span class="cf">if</span> x <span class="op">==</span> <span class="dv">1</span> <span class="cf">else</span> <span class="dv">0</span>)</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>sympy.pprint(P <span class="op">*</span> D_inf <span class="op">*</span> P.inv() <span class="op">*</span> vinit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>If you think about it abstractly though… this is sort of comparing a <span class="math inline">\(K_4\)</span> graph to the new graph on the giant infinite tiled floor. Quite an interesting problem if you think about it. Other than that, I think I should’ve paid attention more in linear algebra, or put more rigor in myself…</p>
+<section id="a1---prove-that-gcd2m_k-1-2n_k-1-1-for-all-positive-integers-k-but-for-a-finite-amount-of-k." class="level2">
+<h2 class="anchored" data-anchor-id="a1---prove-that-gcd2m_k-1-2n_k-1-1-for-all-positive-integers-k-but-for-a-finite-amount-of-k.">A1 - Prove that <span class="math inline">\(gcd(2m_k + 1, 2n_k + 1) = 1\)</span> for all positive integers <span class="math inline">\(k\)</span> but for a finite amount of <span class="math inline">\(k\)</span>.</h2>
+<p><em>Definitions:</em></p>
+<ol type="1">
+<li><span class="math inline">\(gcd(m_k, n_k) = 1\)</span></li>
+<li><span class="math inline">\(\frac{m_k}{n_k} = \frac{2m_{k-1} + 1}{2n_{k-1} + 1}\)</span></li>
+<li><span class="math inline">\(m_0, n_0 \in \mathbf{Z}^+\)</span></li>
+</ol>
+<p>The crux of the problem is to prove that <span class="math inline">\(gcd(2m_k + 1, 2n_k + 1) \neq 1\)</span> for only a finite amount of <span class="math inline">\(k\)</span></p>
+<p>We may hypothesize (for the sake of contradiction) that the <span class="math inline">\(gcd \neq 1\)</span> for infinitely many <span class="math inline">\(k\)</span>. Thus in an attempt to prove this, we can set up an inductive hypothesis that if <span class="math inline">\(gcd(2m_k + 1, 2n_k + 1) \neq 1\)</span>, then for <span class="math inline">\(k+1\)</span> the <span class="math inline">\(gcd\)</span> is also not <span class="math inline">\(1\)</span>. By dichotomy as well, <span class="math inline">\(gcd \neq 1\)</span> for infinitely many <span class="math inline">\(k\)</span>’s XOR finitely many <span class="math inline">\(k\)</span>’s.</p>
+<p>We may</p>
+<ol type="1">
+<li>attempt to disprove the inductive hypothesis</li>
+<li>attempt to disprove the inductive base case</li>
+</ol>
+<p>However attempting to disprove the inductive base case would be trying to prove the nonexistence of a <span class="math inline">\(gcd \neq 1\)</span> which is stronger than simply proving the finiteness of <span class="math inline">\(gcd \neq 1\)</span>, which I don’t think the problem write would make us do. So we will attempt to disprove the inductive hypothesis, which proves the finiteness of <span class="math inline">\(gcd \neq 1\)</span>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

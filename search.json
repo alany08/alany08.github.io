@@ -7,6 +7,13 @@
     "text": "I like sunsets. I like clouds. I like sunsets with pretty clouds. These were all taken by me, with my casual photography equipment and skills (iPhone and a DJI drone)."
   },
   {
+    "objectID": "notes/putnam/index.html",
+    "href": "notes/putnam/index.html",
+    "title": "Putnam",
+    "section": "",
+    "text": "I want to give the Putnam competition a shot this year, so heres my work on some past problems that I may or may not abandon depending on my motivation. I’m just trying to struggle with some problems to learn and train my reasoning through mathematical logic.\n2025 Problems"
+  },
+  {
     "objectID": "notes/calc3/notes/vector_basics.html",
     "href": "notes/calc3/notes/vector_basics.html",
     "title": "Vector Basics",
@@ -299,5 +306,19 @@
     "title": "616c616e",
     "section": "",
     "text": "THIS IS A DEAD PAGE, NO INBOUND LINKS\nLast updated 2025-06-07\nIt would probably be better to have a legit indexing system, but for now I’ll just have this be the index for the lessons I have.\n\nCalculus III"
+  },
+  {
+    "objectID": "notes/putnam/problems/2025.html",
+    "href": "notes/putnam/problems/2025.html",
+    "title": "Past Problems: 2025",
+    "section": "",
+    "text": "Definitions:\n\n\\(gcd(m_k, n_k) = 1\\)\n\\(\\frac{m_k}{n_k} = \\frac{2m_{k-1} + 1}{2n_{k-1} + 1}\\)\n\\(m_0, n_0 \\in \\mathbf{Z}^+\\)\n\nThe crux of the problem is to prove that \\(gcd(2m_k + 1, 2n_k + 1) \\neq 1\\) for only a finite amount of \\(k\\)\nWe may hypothesize (for the sake of contradiction) that the \\(gcd \\neq 1\\) for infinitely many \\(k\\). Thus in an attempt to prove this, we can set up an inductive hypothesis that if \\(gcd(2m_k + 1, 2n_k + 1) \\neq 1\\), then for \\(k+1\\) the \\(gcd\\) is also not \\(1\\). By dichotomy as well, \\(gcd \\neq 1\\) for infinitely many \\(k\\)’s XOR finitely many \\(k\\)’s.\nWe may\n\nattempt to disprove the inductive hypothesis\nattempt to disprove the inductive base case\n\nHowever attempting to disprove the inductive base case would be trying to prove the nonexistence of a \\(gcd \\neq 1\\) which is stronger than simply proving the finiteness of \\(gcd \\neq 1\\), which I don’t think the problem write would make us do. So we will attempt to disprove the inductive hypothesis, which proves the finiteness of \\(gcd \\neq 1\\)."
+  },
+  {
+    "objectID": "notes/putnam/problems/2025.html#a1---prove-that-gcd2m_k-1-2n_k-1-1-for-all-positive-integers-k-but-for-a-finite-amount-of-k.",
+    "href": "notes/putnam/problems/2025.html#a1---prove-that-gcd2m_k-1-2n_k-1-1-for-all-positive-integers-k-but-for-a-finite-amount-of-k.",
+    "title": "Past Problems: 2025",
+    "section": "",
+    "text": "Definitions:\n\n\\(gcd(m_k, n_k) = 1\\)\n\\(\\frac{m_k}{n_k} = \\frac{2m_{k-1} + 1}{2n_{k-1} + 1}\\)\n\\(m_0, n_0 \\in \\mathbf{Z}^+\\)\n\nThe crux of the problem is to prove that \\(gcd(2m_k + 1, 2n_k + 1) \\neq 1\\) for only a finite amount of \\(k\\)\nWe may hypothesize (for the sake of contradiction) that the \\(gcd \\neq 1\\) for infinitely many \\(k\\). Thus in an attempt to prove this, we can set up an inductive hypothesis that if \\(gcd(2m_k + 1, 2n_k + 1) \\neq 1\\), then for \\(k+1\\) the \\(gcd\\) is also not \\(1\\). By dichotomy as well, \\(gcd \\neq 1\\) for infinitely many \\(k\\)’s XOR finitely many \\(k\\)’s.\nWe may\n\nattempt to disprove the inductive hypothesis\nattempt to disprove the inductive base case\n\nHowever attempting to disprove the inductive base case would be trying to prove the nonexistence of a \\(gcd \\neq 1\\) which is stronger than simply proving the finiteness of \\(gcd \\neq 1\\), which I don’t think the problem write would make us do. So we will attempt to disprove the inductive hypothesis, which proves the finiteness of \\(gcd \\neq 1\\)."
   }
 ]
